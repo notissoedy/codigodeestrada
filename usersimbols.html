@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sinais de Trânsito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    .filtros {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    .filtros input, .filtros select {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .sinais-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .sinal {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .sinal img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .sinal h3 {
+      margin: 5px 0;
+      color: #007bff;
+    }
+
+    .sinal p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .info {
+      text-align: center;
+      color: #999;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Sinais de Trânsito</h1>
+
+<div class="filtros">
+  <input type="file" id="uploadJSON" accept=".json" />
+  <input type="text" id="busca" placeholder="Buscar por nome...">
+  <select id="categoria">
+    <option value="">Todas as Categorias</option>
+    <option value="sinais_perigo">Sinais de Perigo</option>
+    <option value="sinais_proibicao">Sinais de Proibição</option>
+    <option value="sinais_obrigacao">Sinais de Obrigação</option>
+  </select>
+</div>
+
+<div class="info">Carregue um arquivo JSON com os sinais exportados do painel admin.</div>
+
+<div id="sinais" class="sinais-container"></div>
+
+<script>
+  let sinais = [];
+
+  const container = document.getElementById("sinais");
+  const busca = document.getElementById("busca");
+  const categoria = document.getElementById("categoria");
+  const uploadJSON = document.getElementById("uploadJSON");
+
+  function renderizarSinais() {
+    const termo = busca.value.toLowerCase();
+    const filtro = categoria.value;
+    container.innerHTML = "";
+
+    const filtrados = sinais.filter(s => {
+      return (!filtro || s.tipo === filtro) &&
+             (!termo || s.nome.toLowerCase().includes(termo));
+    });
+
+    if (filtrados.length === 0) {
+      container.innerHTML = "<p style='text-align:center;'>Nenhum sinal encontrado.</p>";
+      return;
+    }
+
+    filtrados.forEach(sinal => {
+      const div = document.createElement("div");
+      div.className = "sinal";
+      div.innerHTML = `
+        <img src="${sinal.imagem}" alt="${sinal.nome}">
+        <h3>${sinal.nome}</h3>
+        <p><strong>Categoria:</strong> ${sinal.tipo.replace("sinais_", "").toUpperCase()}</p>
+        <p>${sinal.descricao}</p>
+      `;
+      container.appendChild(div);
+    });
+  }
+
+  busca.addEventListener("input", renderizarSinais);
+  categoria.addEventListener("change", renderizarSinais);
+
+  uploadJSON.addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      try {
+        sinais = JSON.parse(event.target.result);
+        renderizarSinais();
+      } catch (err) {
+        alert("Erro ao carregar JSON: formato inválido.");
+      }
+    };
+    reader.readAsText(file);
+  });
+
+</script>
+
+</body>
+</html>

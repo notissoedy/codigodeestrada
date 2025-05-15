@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Código de Estrada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #007bff;
+      --bg: #f8f9fa;
+      --text: #212529;
+      --card: #ffffff;
+      --border: #dee2e6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    select, button, input[type="text"], input[type="file"] {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .image-preview {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+
+    .entry {
+      background-color: var(--card);
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .entry button {
+      margin-top: 10px;
+      background-color: #dc3545;
+    }
+
+    .entry button:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Painel de Administração</h1>
+
+    <label for="id">ID</label>
+    <input type="text" id="id" placeholder="ID do sinal (opcional)" />
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" placeholder="Nome do sinal" />
+
+    <label for="tipo">Categoria/Tipo</label>
+    <select id="tipo">
+      <option value="sinais_perigo">Sinais Temporários de Perigo</option>
+      <option value="sinais_proibicao">Sinais Temporários de Proibição</option>
+      <option value="sinais_obrigacao">Sinais Temporários de Obrigação</option>
+    </select>
+
+    <label for="descricao">Descrição</label>
+    <input type="text" id="descricao" placeholder="Descrição do sinal" />
+
+    <label for="imagem">Imagem</label>
+    <input type="file" id="imagem" accept="image/*" />
+    <img id="preview" class="image-preview" style="display:none" />
+
+    <button onclick="adicionarSinal()">Adicionar Sinal</button>
+    <button onclick="baixarJSON()">📥 Baixar JSON</button>
+
+    <div id="lista"></div>
+  </div>
+
+  <script>
+    let sinais = [];
+
+    document.getElementById("imagem").addEventListener("change", function (e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          document.getElementById("preview").src = event.target.result;
+          document.getElementById("preview").style.display = "block";
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    function adicionarSinal() {
+      const idInput = document.getElementById("id").value.trim();
+      const id = idInput !== "" ? idInput : Date.now();
+      const nome = document.getElementById("nome").value.trim();
+      const tipo = document.getElementById("tipo").value;
+      const descricao = document.getElementById("descricao").value.trim();
+      const imagemInput = document.getElementById("imagem");
+
+      if (!nome || !descricao || (!imagemInput.files[0] && !editando)) {
+        alert("Preencha todos os campos obrigatórios e selecione uma imagem.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const imagem = e.target.result;
+
+        const existente = sinais.findIndex(s => s.id == id);
+        if (existente !== -1) {
+          sinais[existente] = { id, nome, tipo, descricao, imagem };
+        } else {
+          sinais.push({ id, nome, tipo, descricao, imagem });
+        }
+
+        atualizarLista();
+        limparCampos();
+      };
+
+      if (imagemInput.files[0]) {
+        reader.readAsDataURL(imagemInput.files[0]);
+      } else {
+        const existente = sinais.find(s => s.id == id);
+        if (existente) {
+          sinais = sinais.map(s => s.id == id ? { ...s, nome, tipo, descricao } : s);
+          atualizarLista();
+          limparCampos();
+        }
+      }
+    }
+
+    function atualizarLista() {
+      const lista = document.getElementById("lista");
+      lista.innerHTML = "";
+      sinais.forEach(sinal => {
+        const div = document.createElement("div");
+        div.className = "entry";
+        div.innerHTML = `
+          <strong>ID:</strong> ${sinal.id}<br>
+          <strong>Nome:</strong> ${sinal.nome}<br>
+          <strong>Categoria:</strong> ${sinal.tipo}<br>
+          <strong>Descrição:</strong> ${sinal.descricao}<br>
+          <img src="${sinal.imagem}" style="max-width:100px; margin-top:10px;"><br>
+          <button onclick="editarSinal('${sinal.id}')">✏️ Editar</button>
+          <button onclick="removerSinal('${sinal.id}')">🗑️ Remover</button>
+        `;
+        lista.appendChild(div);
+      });
+    }
+
+    function editarSinal(id) {
+      const sinal = sinais.find(s => s.id == id);
+      if (sinal) {
+        document.getElementById("id").value = sinal.id;
+        document.getElementById("nome").value = sinal.nome;
+        document.getElementById("tipo").value = sinal.tipo;
+        document.getElementById("descricao").value = sinal.descricao;
+        document.getElementById("preview").src = sinal.imagem;
+        document.getElementById("preview").style.display = "block";
+      }
+    }
+
+    function removerSinal(id) {
+      if (confirm("Deseja remover este sinal?")) {
+        sinais = sinais.filter(s => s.id != id);
+        atualizarLista();
+      }
+    }
+
+    function limparCampos() {
+      document.getElementById("id").value = "";
+      document.getElementById("nome").value = "";
+      document.getElementById("descricao").value = "";
+      document.getElementById("imagem").value = "";
+      document.getElementById("preview").style.display = "none";
+    }
+
+    function baixarJSON() {
+      const blob = new Blob([JSON.stringify(sinais, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "sinais.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</body>
+</html>
