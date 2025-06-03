@@ -5,82 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Código da Estrada - Títulos</title>
   <link rel="stylesheet" href="css/navbar.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-    }
+  <script src="js/navbar.js"></script>
+  <link rel="stylesheet" href="css/home.css" />
 
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 12px;
-    }
-
-    li {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      transition: all 0.2s ease-in-out;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-
-    li:hover {
-      background-color: #e6f0ff;
-      transform: scale(1.02);
-    }
-
-    a {
-      text-decoration: none;
-      color: #004080;
-      font-weight: 500;
-      display: block;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.4rem;
-      }
-
-      li {
-        padding: 10px;
-      }
-    }
-  </style>
 </head>
 <body>
 
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" >Home</a>
+  <a href="home.html" class="active">Codigo de estrada </a>
+  <a href="userTransgrecoes.html">Transgrecoes e Multas</a>
+  <a href="userSimbols.html">Sinalizacao</a>
+
+  <a href="userQuiz.html">Quiz & Exames</a>
+  <a href="favoritos.html"> Artigos Favoritos</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
   <header>
-    <h1>Código da Estrada</h1>
+ 
+    <h1>  Código da Estrada </h1>
+ 
   </header>
 
   <main>
@@ -115,6 +66,6 @@
     </ul>
   </main>
 
-  <script src="js/navbar.js"></script>
+
 </body>
 </html>

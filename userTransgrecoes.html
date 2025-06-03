@@ -4,54 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transgressões e Multas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    thead {
-      background-color: #007bff;
-      color: white;
-      cursor: pointer;
-    }
-    thead tr:first-child th {
-      font-size: 18px;
-      padding: 15px;
-      text-align: left;
-    }
-    thead tr:nth-child(2) th {
-      background-color: #0056b3;
-      padding: 10px;
-    }
-    tbody tr td {
-      padding: 10px;
-      border-top: 1px solid #ddd;
-    }
-    .collapsed {
-      display: none;
-    }
-    .expanded {
-      display: table-row-group;
-    }
-    .toggle-icon {
-      float: right;
-    }
-  </style>
+  <link rel="stylesheet" href="css/navbar.css" />
+  <script src="js/navbar.js"></script>
+
+  <link rel="stylesheet" href="css/trans.css" />
+
 </head>
 <body>
-  <h1>Transgressões e Multas - Código da Estrada</h1>
-  <div id="tabelas-container"></div>
+ 
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<div class="topnav" id="myTopnav">
+  <a href="index.html" >Home</a>
+  <a href="home.html">Codigo de estrada </a>
+  <a href="userTransgrecoes.html"  class="active">Transgrecoes e Multas</a>
+  <a href="userSimbols.html">Sinalizacao</a>
+
+  <a href="userQuiz.html">Quiz & Exames</a>
+  <a href="favoritos.html"> Artigos Favoritos</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+  <header>
+ 
+    <h1>  Transgressões e Multas - Código da Estrada </h1>
+ 
+  </header>
+
+  <div class="tabelas-container" id="tabelas-container"></div>
   <script>
     async function carregarTabelas() {
      // const response = await fetch('transgressoes.json');
@@ -62,27 +46,27 @@
     "dados": [
       {
         "infracao": "Impedir ou embaraçar a circulação de veículos",
-        "artigo": "Art.º 3, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-3'> Art.º 3, n.º 3</a>",
         "multa": "3.000,00MT",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Colocação de obstáculos para impedir ou embaraçar o trânsito",
-        "artigo": "Art.º 4, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-4'>Art.º 4, n.º 2</a>",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Eventos (festas, provas, cortejos) na estrada sem autorização",
-        "artigo": "Art.º 5, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-5'>Art.º 5, n.º 4</a>",
         "multa": "5.000,00MT",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Circulação de veículos não autorizados ",
-        "artigo": "Art.º 7, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-7'>Art.º 7, n.º 4</a>",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -91,39 +75,39 @@
     "dados": [
       {
         "infracao": "Não obedecer ao sinal de paragem do agente da PT",
-        "artigo": "Art.º 11, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-11'>Art.º 11, n.º 3</a>",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Obedecer tardiamente ao sinal de paragem do agente da PT ",
-        "artigo": "Art.º 11, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-11'>Art.º 11, n.º 3</a>",
         "multa": "500,00MT",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Falta de sinalização de obstáculos eventuais",
-        "artigo": "Art.º 12, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-12'>Art.º 12, n.º 3</a>",
         "multa": "10.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Interrupção ou Condicionamento de vias de circulação  ",
-        "artigo": "Art.º 12, n.º 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-12'>Art.º 12, n.º 6</a>",
         "multa": "5.000,00MT",
         "responsavel": " Empresa ou particular responsável"
       },
       {
         "infracao": "Desobediência aos veículos prioritários (ambulâncias e comitivas governamentais)",
-        "artigo": "Art.º 15, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-15'>Art.º 15, n.º 4</a>",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Desobediência aos sinais de regulação do agente da PT  ",
-        "artigo": "Art.º 14, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-14'>Art.º 14, n.º 3</a>",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -132,63 +116,63 @@
     "dados": [
       {
         "infracao": "Condução com parte do corpo fora do veículo",
-        "artigo": "Art.º 16, n.º 3 e 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-16'>Art.º 16</a>, n.º 3 e 4",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Condução que prejudique a segurança na estrada ",
-        "artigo": "Art.º 16, n.º 2 e 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-16'>Art.º 16, n.º 2 e 4</a>",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Condução à direita ou não encostada à berma esquerda ",
-        "artigo": "Art.º 17, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-17'>Art.º 17, n.º 3</a>",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Condução na fila de trânsito à direita  ",
-        "artigo": "Art.º 18, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-18'>Art.º 18, n.º 3</a>",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Mudança de fila sem a tomada de precauções ",
-        "artigo": "Art.º 18, n.º 2 e 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-18'>Art.º 18, n.º 2 e 3</a>",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Início da marcha sem sinalização ",
-        "artigo": "Art.º 19, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-19'>Art.º 19, n.º 2</a>",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Falta de manutenção de distância segura entre os veículos ",
-        "artigo": "Art.º 20, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-20'>Art.º 20, n.º 3</a>",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Travessia de veículos em passeios à margem do regulamento local ",
-        "artigo": "Art.º 21, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-21'>Art.º 21, n.º 2</a>",
         "multa": "500,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Ultrapassagem nos cruzamentos e entroncamentos ",
-        "artigo": "Art.º 22, n.º 4 e 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-22'>Art.º 22, n.º 4 e 5</a>",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução à direita de entroncamentos e cruzamentos ",
-        "artigo": "Art.º 22, n.º 1 e 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-22'>Art.º 22, n.º 1 e 5</a>",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -197,39 +181,39 @@
     "dados": [
       {
         "infracao": "Não uso do sinal luminoso (pisca) nas manobras.",
-        "artigo": "Art.º 23, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-23'>Art.º 23, n.º 3</a>",
         "multa": "500,00MT  Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Mau uso dos sinais sonoros (Buzina), ou uso para protestos. ",
-        "artigo": "Art.º 24, n.º 8",
+        "artigo": "<a href='conteudo.html?secao=artigo-24'>Art.º 24, n.º 8</a>",
         "multa": "500,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Uso de sinais sonoros especiais ",
-        "artigo": "Art.º 25, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-25'>Art.º 25, n.º 3</a>",
         "multa": "1000,00MT e remoção imediata, ou apreensão do livrete ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Uso irregular dos sinais luminosos em substituição aos sinais sonoros  ",
-        "artigo": "Art.º 26, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-26'>Art.º 26, n.º 2</a>",
         "multa": "500,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Uso de sinais luminosos especiais ",
-        "artigo": "Art.º 27, n.º 5 e 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-27'>Art.º 27, n.º 5 e 7</a>",
         "multa": "2000,00MT e remoção imediata, ou apreensão do livrete ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Uso de máximos (luzes) em locais bem iluminados ",
-        "artigo": "Art.º 27, n.º 6 e Art.º 28",
+        "artigo": "<a href='conteudo.html?secao=artigo-27'>Art.º 27, n.º 6</a> e <a href='conteudo.html?secao=artigo-28'>Art.º 28</a>",
         "multa": "1000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -238,51 +222,51 @@
     "dados": [
       {
         "infracao": "Excesso de velocidade simples (incapacidade para travar atempadamente o carro) ",
-        "artigo": "Art.º 30, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-30'>Art.º 30, n.º 2</a>",
         "multa": "1000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Trânsito em marcha lenta que embaraça o trânsito  ",
-        "artigo": "Art.º 31, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-31'>Art.º 31, n.º 2</a>",
         "multa": "500,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Excesso de velocidade nos locais especialmente protegidos  ",
-        "artigo": "Art.º 30, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-30'>Art.º 30, n.º 4</a>",
         "multa": "1000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Velocidade máxima dentro das  localidades (60 km/h)/Pesados 60 km/h  ",
-        "artigo": "Art.º 33, n.º 1",
+        "artigo": "<a href='conteudo.html?secao=artigo-33'>Art.º 33, n.º 1</a>",
         "multa": " 20km/h – 1.000,00MT Leve ; 40km/h – 2.000,00M Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) 60km/h – 4.000,00MT Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) <60km/h – 8.000,00MT Grave ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Velocidade máxima fora das localidades (120 km/h)/Pesados 100km/h ",
-        "artigo": "Art.º 33, n.º 2 Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes)",
+        "artigo": "<a href='conteudo.html?secao=artigo-33'>Art.º 33, n.º 2</a> Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes)",
         "multa": " 20km/h – 1.000,00MT Leve ; 40km/h – 2.000,00M Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) 60km/h – 4.000,00MT - Grave; <60km/h – 8.000,00MT Grave ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução em velocidade inferior a 40 km/h na auto estrada ",
-        "artigo": "Art.º  33, n.º 3 e Art.º 31,n.º 2 ",
+        "artigo": "<a href='conteudo.html?secao=artigo-3'>Art.º  33, n.º 3</a> e <a href='conteudo.html?secao=artigo-31'>Art.º 31,n.º 2 </a>",
         "multa": "500,00MT Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
-        "infracao": " Condução em velocidades superior a 90 km/h, por Condutor, al. a), n.º 3, art.º 140 não profissionais (menos de 1 ano de habilitação para condução) ",
-        "artigo": "Art.º  33, n.º 3 e Art.º 31,n.º 2 ",
+        "infracao": " Condução em velocidades superior a 90 km/h, por Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a> não profissionais (menos de 1 ano de habilitação para condução) ",
+        "artigo": "<a href='conteudo.html?secao=artigo-33'>Art.º  33, n.º 3 </a> e <a href='conteudo.html?secao=artigo-31'>Art.º 31,n.º 2 </a>",
         "multa": "500,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme as vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Inobservância dos limites especiais de velocidade em determinados transporte, zonas urbanas ou regiões. ",
-        "artigo": "Art.º  37",
-        "multa": " REGRAS GERAIS do art.º 33",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "artigo": "<a href='conteudo.html?secao=artigo-37'>Art.º  37</a>",
+        "multa": " REGRAS GERAIS do <a href='conteudo.html?secao=artigo-33'>art.º 33</a>",
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -291,33 +275,33 @@
     "dados": [
       {
         "infracao": " Desobediência às regras de prioridade de passagem",
-        "artigo": "Art.º 38, n.º 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-38'>Art.º 38, n.º 6</a>",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Desobediência às regras de cedência de passagem",
-        "artigo": "Art.º 39, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-39'>Art.º 39</a>, n.º 4",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Desobediência às regras de cedência de passagem às colunas militares ou militarizadas  ",
-        "artigo": "Art.º 40, n.º 1 e 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-40'>Art.º 40</a>, n.º 1 e 5",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Desobediência às regras de cedência de passagem à veículos motorizados por velocípedes e veículos à tracção animal.  ",
-        "artigo": "Art.º 40, n.º 2 e 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-40'>Art.º 40</a>, n.º 2 e 6",
         "multa": "500,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Desobediência às regras de sobre o cruzamento dos veículos  ",
-        "artigo": "Art.º 41, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-41'>Art.º 41</a>, n.º 7",
         "multa": "1000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -326,39 +310,39 @@
     "dados": [
       {
         "infracao": " Ultrapassagem irregular ",
-        "artigo": "Art.º 43, n.º 9",
+        "artigo": "<a href='conteudo.html?secao=artigo-43'>Art.º 43</a>, n.º 9",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Ultrapassagem proibida (locais)",
-        "artigo": "Art.º 44, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-44'>Art.º 44</a>, n.º 5",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Mudança de direcção irregular",
-        "artigo": "Art.º 45, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-45'>Art.º 45</a>, n.º 5",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Mudança de direcção para a esquerda de forma irregular ",
-        "artigo": "Art.º 46, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-46'>Art.º 46</a>, n.º 2",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Inversão do sentido de marcha irregular ",
-        "artigo": "Art.º 47, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-47'>Art.º 47</a>, n.º 3",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Marcha atrás irregular ",
-        "artigo": "Art.º 48, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-48'>Art.º 48</a>, n.º 5",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -367,33 +351,33 @@
     "dados": [
       {
         "infracao": " Estacionamento irregular (simples)",
-        "artigo": "Art.º 49, n.º 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-49'>Art.º 49</a>, n.º 6",
         "multa": "1.500,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Estacionamento em locais proibidos",
-        "artigo": "Art.º 50, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-40'>Art.º 50</a>, n.º 3",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Estacionamento em locais proibidos em zona municipal (dentro das localidades)",
-        "artigo": "Art.º 51, n.º 1 e 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-51'>Art.º 51</a>, n.º 1 e 4",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Estacionamento em locais proibidos fora das localidades ",
-        "artigo": "Art.º 51, n.º 2 e 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-51'>Art.º 51</a>, n.º 2 e 5",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Paragem irregular de veículo utilizado no transporte colectivo de passageiros  ",
-        "artigo": "Art.º 53, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-53'>Art.º 53</a>, n.º 3",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -402,27 +386,27 @@
     "dados": [
       {
         "infracao": " Descarregamento de pessoas e de carga (lentidão) de forma irregular ",
-        "artigo": "Art.º 54, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-54'>Art.º 54</a>, n.º 3",
         "multa": "500,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Lotação excessiva de passageiros, passageiros fora dos assentos  ",
-        "artigo": "Art.º 55, n.º 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-55'>Art.º 55</a>, n.º 6",
         "multa": "500,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Transporte irregular de carga e o descarregamento irregular ",
-        "artigo": "Art.º 56, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-56'>Art.º 56</a>, n.º 5",
         "multa": "1.000,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Excesso de peso ou excesso de dimensões do veículo (falta de autorização) ",
-        "artigo": "Art.º 57 e 58, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-57'>Art.º 57</a> e 58, n.º 7",
         "multa": "10.000,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -431,45 +415,45 @@
     "dados": [
       {
         "infracao": "  Ausência de todos os faróis de iluminação e sinalização ",
-        "artigo": "Art.º 59, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-59'>Art.º 59</a>, n.º 3",
         "multa": "2.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Ausência de algum dos faróis de iluminação e sinalização  ",
-        "artigo": "Art.º 59, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-59'>Art.º 59</a>, n.º 4",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Uso de luzes não previstas no Código e no Regulamento  ",
-        "artigo": "Art.º 60, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-60'>Art.º 60</a>, n.º 3",
         "multa": "1.000,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Uso irregular dos mínimos e médios quando não se    ",
-        "artigo": "Art.º 61, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-61'>Art.º 61</a>, n.º 4",
         "multa": "500,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Uso de máximos nos cruzamentos com outros veículos ou a menos de 100 metros do antecedente  ",
-        "artigo": "Art.º 61, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-61'>Art.º 61</a>, n.º 5",
         "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Circulação de veículo com avaria nas luzes ",
-        "artigo": "Art.º 62, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-62'>Art.º 62</a>, n.º 4",
         "multa": "750,00MT ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Não uso de luzes de emergência em casos de perigo, obstáculo, intempéries etc.  ",
-        "artigo": "Art.º 63, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-63'>Art.º 63</a>, n.º 5",
         "multa": "750,00MT Pena Acessória - Inibição para conduzir  (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -478,69 +462,69 @@
     "dados": [
       {
         "infracao": " Falta de cobertura com lonas ou oleados no transporte de cargas especiais ",
-        "artigo": "Art.º 64, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-64'>Art.º 64</a>, n.º 3",
         "multa": "2.000,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Desobediência referente ao trânsito de veículos em serviço de urgência  ",
-        "artigo": "Art.º 65, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-65'>Art.º 65</a>, n.º 4",
         "multa": "1.000,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": " Dever de ceder passagem à direita dos veículos em serviço de urgência  ",
-        "artigo": "Art.º 66, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-66'>Art.º 66</a>, n.º 4",
         "multa": "1.000,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "  Dever de ceder prioridade aos veículos ferroviários na passagem de nível  ",
-        "artigo": "Art.º 67, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-67'>Art.º 67</a>, n.º 5",
         "multa": "750,00MT  ",
-        "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Obrigatoriedade de remoção de  veículo ou carga quedada em  passagem de nível",
-        "artigo": "Art.º 68, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-68'>Art.º 68</a>, n.º 2",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Desobediência às regras  relativas a travessias em  cruzamentos e entroncamentos",
-        "artigo": "Art.º 69, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-69'>Art.º 69</a>, n.º 4",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Atravessar linha destinada a  demarcação de estacionamento",
-        "artigo": "Art.º 70, n.º 1 e 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-70'>Art.º 70</a>, n.º 1 e 3",
         "multa": "500,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Estacionamento proibido para  venda de artigos ou excesso de  tempo definido",
-        "artigo": "Art.º 71, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-71'>Art.º 71</a>, n.º 2",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Proibição de trânsito de  velocípedes de tracção animal  na auto-estrada e de veículos  estacionados ou sem as luzes  regulamentares",
-        "artigo": "Art.º 72, n.º 1, 2 e 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-72'>Art.º 72</a>, n.º 1, 2 e 3",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Proibição de trânsito de peões  nas auto-estradas",
-        "artigo": "Art.º 72, n.º 1 e 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-72'>Art.º 72</a>, n.º 1 e 3",
         "multa": "100,00MT",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Marcha atrás, inversão da  marcha, ensino de condução e  transposição de separadores na  auto-estrada",
-        "artigo": "Art.º 72, n.º 2 e 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-72'>Art.º 72</a>, n.º 2 e 4",
         "multa": "1.000,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -549,39 +533,39 @@
     "dados": [
       {
         "infracao": "Desobediência relativa às regras  de entrada e saída das auto estradas",
-        "artigo": "Art.º 73, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-73'>Art.º 73</a>, n.º 4",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Obrigatoriedade do uso das 2  faixas à esquerda por parte de  conjunto de veículos pesados",
-        "artigo": "Art.º 74, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-74'>Art.º 74</a>, n.º 2",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Trânsito nas faixas reservadas  aos veículos de transporte  público",
-        "artigo": "Art.º 75, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-75'>Art.º 75</a>, n.º 2",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Uso de corredores de circulação  por veículos não autorizados",
-        "artigo": "Art.º 76, n.º 1 e 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-76'>Art.º 76</a>, n.º 1 e 3",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Utilização de veículos a motor  em pistas destinadas à animais  ou velocípedes",
-        "artigo": "Art.º 77, n.º 1, 2, 3 e 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-77'>Art.º 77</a>, n.º 1, 2, 3 e 5",
         "multa": "500,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Uso pelos peões das pistas de  velocípedes e animais",
-        "artigo": "Art.º 77, n.º 4 e 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-77'>Art.º 77</a>, n.º 4 e 6",
         "multa": "300,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -590,39 +574,39 @@
     "dados": [
       {
         "infracao": "Proibição de excesso de fumo e  derramamento de óleo em  veículo",
-        "artigo": "Art.º 78, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-78'>Art.º 78</a>, n.º 2",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Proibição do Condutor e  passageiro de atirar objectos  para fora do veículo",
-        "artigo": "Art.º 78, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-78'>Art.º 78</a>, n.º 4",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (3 meses, 6  meses, 1 ano e 2 anos  conforme as vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Poluição sonora:  Excesso de 0 a 5 decibéis",
-        "artigo": "Art.º 79, n.º 5, al. a)",
+        "artigo": "<a href='conteudo.html?secao=artigo-79'>Art.º 79</a>, n.º 5, al. a)",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Poluição sonora:  Excesso de 6 a 10 decibéis",
-        "artigo": "Art.º 79, n.º 5, al. b)",
+        "artigo": "<a href='conteudo.html?secao=artigo-79'>Art.º 79</a>, n.º 5, al. b)",
         "multa": "1.500,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Poluição sonora:  Excesso de 11 a 20 decibéis",
-        "artigo": "Art.º 79, n.º 5, al. c)",
+        "artigo": "<a href='conteudo.html?secao=artigo-79'>Art.º 79</a>, n.º 5, al. c)",
         "multa": "3.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Poluição sonora:  Excesso acima de 20 decibéis",
-        "artigo": "Art.º 79, n.º 5, al. d)",
-        "multa": "Apreensão do veículo e  prisão até 3 meses do  Condutor, al. a), n.º 3,  art.º 140",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "artigo": "<a href='conteudo.html?secao=artigo-79'>Art.º 79</a>, n.º 5, al. d)",
+        "multa": "Apreensão do veículo e  prisão até 3 meses do  Condutor, al. a), n.º 3,  <a href='conteudo.html?secao=artigo-140'>art.º 140</a>",
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -631,63 +615,63 @@
     "dados": [
       {
         "infracao": "Recusa de submissão ao teste de  consumo de álcool e substâncias  proibidas",
-        "artigo": "Art.º 80, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-80'>Art.º 80</a>, n.º 2",
         "multa": "Crime de desobediência   [prisão até 3 meses]  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
-        "infracao": "Recusa ou negligência do  médico na avaliação dos níveis  de consumo de álcool e  substâncias proibidas aos  Condutor, al. a), n.º 3, art.º 140",
-        "artigo": "Art.º 80, n.º 3",
+        "infracao": "Recusa ou negligência do  médico na avaliação dos níveis  de consumo de álcool e  substâncias proibidas aos  Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>",
+        "artigo": "<a href='conteudo.html?secao=artigo-80'>Art.º 80</a>, n.º 3",
         "multa": "Crime de desobediência   [prisão até 3 meses]",
         "responsavel": "Médico"
       },
       {
         "infracao": "Transporte de bebidas alcoólicas  ou substâncias proibidas nos  assentos de passageiros",
-        "artigo": "Art.º 81, n.º 1 e 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 1 e 6",
         "multa": "500,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Taxa de excesso de álcool:  0.0 Mg/l até 0.29 mg/l",
-        "artigo": "Art.º 81, n.º 2 e 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 2 e 7",
         "multa": "Serviços Públicos  1.500,00MT  Veículos particulares  Sem punição",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Taxa de excesso de álcool:  0.3 Mg/l até 0.40 mg/l",
-        "artigo": "Art.º 81, n.º 2 e 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 2 e 7",
         "multa": "2.500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Taxa de excesso de álcool:  0.41 Mg/l até 0.70 mg/l",
-        "artigo": "Art.º 81, n.º 2 e 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 2 e 7",
         "multa": "3.500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Taxa de excesso de álcool:  Superior a 0.71 mg/l",
-        "artigo": "Art.º 81, n.º 2 e 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 2 e 7",
         "multa": "5.000,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Taxa de excesso de álcool:  Superior a 1.2 mg/l",
-        "artigo": "Art.º 81, n.º 8",
-        "multa": "[Condutor, al. a), n.º 3,  art.º 140 - não  profissionais]  Prisão até 1 mês e   5.000,00MT (multa)  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 8",
+        "multa": "[Condutor, al. a), n.º 3,  <a href='conteudo.html?secao=artigo-140'>art.º 140</a> - não  profissionais]  Prisão até 1 mês e   5.000,00MT (multa)  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Taxa de excesso de álcool:  Superior a 1.2 mg/l",
-        "artigo": "Art.º 81, n.º 8",
-        "multa": "[Condutor, al. a), n.º 3,  art.º 140es profissionais]  Prisão até 6 meses e   5.000,00MT (multa)  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 8",
+        "multa": "[Condutor, al. a), n.º 3,  <a href='conteudo.html?secao=artigo-140'>art.º 140</a>es profissionais]  Prisão até 6 meses e   5.000,00MT (multa)  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução sob efeito de  estupefacientes ou substâncias  psicotrópicas (drogas)",
-        "artigo": "Art.º 81, n.º 10",
+        "artigo": "<a href='conteudo.html?secao=artigo-81'>Art.º 81</a>, n.º 10",
         "multa": "2.000,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -696,21 +680,21 @@
     "dados": [
       {
         "infracao": "Transporte irregular de crianças  menores de 3 anos",
-        "artigo": "Art.º 87, n.º 4 a 8",
+        "artigo": "<a href='conteudo.html?secao=artigo-87'>Art.º 87</a>, n.º 4 a 8",
         "multa": "300,00MT/ por criança  mal transportada  Pena Acessória - Inibição  para conduzir (3 meses, 6  meses, 1 ano e 2 anos  conforme as vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Não uso do cinto de segurança",
-        "artigo": "Art.º 87, n.º 1 e 9",
+        "artigo": "<a href='conteudo.html?secao=artigo-87'>Art.º 87</a>, n.º 1 e 9",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (3 meses, 6  meses, 1 ano e 2 anos  conforme as vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Não uso do cinto do capacete",
-        "artigo": "Art.º 87, n.º 2 e 10",
+        "artigo": "<a href='conteudo.html?secao=artigo-87'>Art.º 87</a>, n.º 2 e 10",
         "multa": "300,00MT  Pena Acessória - Inibição  para conduzir (3 meses, 6  meses, 1 ano e 2 anos  conforme as vezes)",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -719,25 +703,25 @@
     "dados": [
       {
         "infracao": "Obrigação de carta profissional  para condução remunerada",
-        "artigo": "Art.º 88, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-88'>Art.º 88</a>, n.º 3",
         "multa": "10.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Uso de telemóveis, aparelhos  radiofónicos e televisores sem  auscultadores ou sistema alta  voz durante a marcha do veículo",
-        "artigo": "Art.º 89, n.º 1 e 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-89'>Art.º 89</a>, n.º 1 e 4",
         "multa": "2.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Instalação de algum dispositivo  para perturbar o funcionamento  dos mecanismos de fiscalização  rodoviária",
-        "artigo": "Art.º 89, n.º 3 e 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-89'>Art.º 89</a>, n.º 3 e 5",
         "multa": "2.750,00MT e  Remoção dos objectos  ou apreensão do livrete  até a remoção",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Não remoção de veículo da faixa  de circulação em casos de avaria  sanável",
-        "artigo": "Art.º 90, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-90'>Art.º 90</a>, n.º 5",
         "multa": "2.750,00MT e  Remoção dos objectos  ou apreensão do livrete  até a remoção",
         "responsavel": "1.000,00MT"
       }
@@ -748,31 +732,31 @@
     "dados": [
       {
         "infracao": "Uso obrigatório de coletes  reflectores e/ou de 2 triângulos  de pré-sinalização de perigo",
-        "artigo": "Art.º 91, n.º 8",
+        "artigo": "<a href='conteudo.html?secao=artigo-91'>Art.º 91</a>, n.º 8",
         "multa": "1.000,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Uso de triângulos e coletes  irregulares",
-        "artigo": "Art.º 91, n.º 8",
+        "artigo": "<a href='conteudo.html?secao=artigo-91'>Art.º 91</a>, n.º 8",
         "multa": "300,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Uso inadequado de coletes  reflectores e/ou de triângulos de  pré-sinalização de perigo",
-        "artigo": "Art.º 91, n.º 8",
+        "artigo": "<a href='conteudo.html?secao=artigo-91'>Art.º 91</a>, n.º 8",
         "multa": "500,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
-        "infracao": "Obrigatoriedade de exibição de  documentos do veículo e do  Condutor, al. a), n.º 3, art.º 140  aos intervenientes em acidente",
-        "artigo": "Art.º 92, n.º 1 e 3",
+        "infracao": "Obrigatoriedade de exibição de  documentos do veículo e do  Condutor, al. a), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>  aos intervenientes em acidente",
+        "artigo": "<a href='conteudo.html?secao=artigo-92'>Art.º 92</a>, n.º 1 e 3",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Obrigatoriedade de manutenção  no local de acidente havendo  mortos e/ou feridos",
-        "artigo": "Art.º 92, n.º 2 e 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-92'>Art.º 92</a>, n.º 2 e 4",
         "multa": "750,00MT  Se não for aplicável  outra mais grave",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       }
@@ -783,37 +767,37 @@
     "dados": [
       {
         "infracao": "Condução sem mãos, sem apoio  nos pedais, fazer-se rebocar,  condução em par ou  levantamento de rodas por parte  de motociclos, ciclomotores ou  outros",
-        "artigo": "Art.º 93, n.º 1 e 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-93'>Art.º 93</a>, n.º 1 e 3",
         "multa": "300,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Transporte de passageiro com  menos de 7 anos por motociclos,  ciclomotores e velocípedes",
-        "artigo": "Art.º 94, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-94'>Art.º 94</a>, n.º 2",
         "multa": "300,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Transporte de carga sem  atrelado ou caixa de carga por  motociclos, ciclomotores ou  velocípedes",
-        "artigo": "Art.º 95, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-95'>Art.º 95</a>, n.º 3",
         "multa": "250,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Obrigatoriedade de manter as  luzes acesas em motociclos,  triciclos, quadriciclos e  ciclomotores.",
-        "artigo": "Art.º 96, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-96'>Art.º 96</a>, n.º 4",
         "multa": "500,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Procedimento incorrecto nos  casos de avaria das luzes por  parte de motociclos, triciclos,  quadriciclos e ciclomotores.",
-        "artigo": "Art.º 97, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-97'>Art.º 97</a>, n.º 3",
         "multa": "250,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Redução para a metade as  multas aplicáveis aos  velocípedes.",
-        "artigo": "Art.º 99",
+        "artigo": "<a href='conteudo.html?secao=artigo-99'>Art.º 99</a>",
         "multa": "50% do valor das  multas acima",
         "responsavel": "Ciclista"
       }
@@ -824,9 +808,9 @@
     "dados": [
       {
         "infracao": "Violação das regras referentes a  condução e orientação dos  veículos movidos à tracção  animal",
-        "artigo": "Art.º 100, n.º 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-100'>Art.º 100</a>, n.º 6",
         "multa": "300,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -835,45 +819,45 @@
     "dados": [
       {
         "infracao": "Trânsito fora dos passeios, pistas  ou bermas.",
-        "artigo": "Art.º 102, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-102'>Art.º 102</a>, n.º 5",
         "multa": "250,00MT",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Trânsito pela faixa de rodagem  sem que se verifiquem os  motivos que o Código permite  (atravessamento, transporte de  carga pesada, proibição de  circulação de veículos e outros)",
-        "artigo": "Art.º 102, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-102'>Art.º 102</a>, n.º 5",
         "multa": "250,00MT  Pena Acessória - Inibição  para conduzir (3 meses, 6  meses, 1 ano e 2 anos  conforme as vezes)",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
-        "infracao": "Proibição de trânsito pelo lado  esquerdo da berma da faixa de  rodagem por parte do Peão, al.  c), n.º 3, art.º 140, excepto nos  casos admitidos no Código",
-        "artigo": "Art.º 103, n.º 4",
+        "infracao": "Proibição de trânsito pelo lado  esquerdo da berma da faixa de  rodagem por parte do Peão, al.  c), n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>, excepto nos  casos admitidos no Código",
+        "artigo": "<a href='conteudo.html?secao=artigo-103'>Art.º 103</a>, n.º 4",
         "multa": "250,00MT",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
-        "infracao": "Atravessamento irregular ou a  paragem na faixa de rodagem  por parte do Peão, al. c), n.º 3,  art.º 140",
-        "artigo": "Art.º 104, n.º 5",
+        "infracao": "Atravessamento irregular ou a  paragem na faixa de rodagem  por parte do Peão, al. c), n.º 3,  <a href='conteudo.html?secao=artigo-140'>art.º 140</a>",
+        "artigo": "<a href='conteudo.html?secao=artigo-104'>Art.º 104</a>, n.º 5",
         "multa": "250,00MT",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Obrigatoriedade de sinais  luminosos em marcha nos casos  de cortejos durante a noite",
-        "artigo": "Art.º 105, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-105'>Art.º 105</a>, n.º 2",
         "multa": "500,00MT",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Obrigatoriedade de cedência de  prioridades aos peões aleijados  e todos os demais que já tenham  iniciado o atravessamento na  faixa de rodagem  independentemente da  permissão para a passagem de  veículos.",
-        "artigo": "Art.º 106, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-106'>Art.º 106</a>, n.º 5",
         "multa": "1.000,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Uso de 2 ou mais semi-reboques  quando não se trata de viaturas  interlink.",
-        "artigo": "Art.º 113, n.º 6 e 9",
+        "artigo": "<a href='conteudo.html?secao=artigo-113'>Art.º 113</a>, n.º 6 e 9",
         "multa": "10.000,00MT",
-        "responsavel": "Peão, al. c), n.º  3, art.º 140"
+        "responsavel": "Peão, al. c), n.º  3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -882,31 +866,31 @@
     "dados": [
       {
         "infracao": "Violação das normas que  disciplinam o fabrico e  comercialização de veículos",
-        "artigo": "Art.º 117, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-117'>Art.º 117</a>, n.º 4",
         "multa": "Pessoa colectivas  10.000,00MT  Individual  5.000,00MT",
         "responsavel": "Fabricante ou  Comerciante"
       },
       {
         "infracao": "Uso de modelos de veículos não  aprovados e fixados por  regulamento",
-        "artigo": "Art.º 117, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-117'>Art.º 117</a>, n.º 5",
         "multa": "500,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Proibição de importação de  veículos com volante à esquerda  para fins comerciais",
-        "artigo": "Art.º 117, n.º 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-117'>Art.º 117</a>, n.º 6",
         "multa": "(nada previsto)",
         "responsavel": "Importador"
       },
       {
         "infracao": "Trânsito de modelos de veículos  não aprovados e fixados por  regulamento",
-        "artigo": "Art.º 117, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-117'>Art.º 117</a>, n.º 7",
         "multa": "500,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Transformação das  características construtivas e  funcionais de veículos previstas  no Código e Regulamento",
-        "artigo": "Art.º 118, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-118'>Art.º 118</a>, n.º 3",
         "multa": "1.000,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       }
@@ -917,33 +901,33 @@
     "dados": [
       {
         "infracao": "Falta de inspecção obrigatória",
-        "artigo": "Art.º 119, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-119'>Art.º 119</a>, n.º 3",
         "multa": "2.000,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Circulação de veículo automóvel  sem matrícula",
-        "artigo": "Art.º 120, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-120'>Art.º 120</a>, n.º 7",
         "multa": "5.000,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Circulação de ciclomotor,  tractocarro, tractor ou reboque  agrícola ou florestal",
-        "artigo": "Art.º 120, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-120'>Art.º 120</a>, n.º 7",
         "multa": "2.500,00MT",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Circulação com veículo cujas  características não  correspondam com o livrete",
-        "artigo": "Art.º 122, n.º 10",
+        "artigo": "<a href='conteudo.html?secao=artigo-122'>Art.º 122</a>, n.º 10",
         "multa": "750,00MT  Ou sanção mais grave  se aplicável  Pena Acessória - Inibição  para conduzir (3 meses, 6  meses, 1 ano e 2 anos  conforme as vezes)",
         "responsavel": "Proprietário, al.  b), n.º 3, art.º  140"
       },
       {
         "infracao": "Cancelamento da matrícula em  caso de inutilização ou  desaparecimento do veículo  depois de 30 dias",
-        "artigo": "Art.º 123, n.º 1 e  9",
+        "artigo": "<a href='conteudo.html?secao=artigo-123'>Art.º 123</a>, n.º 1 e  9",
         "multa": "500,00MT   Ou sanção mais grave  se aplicável",
-        "responsavel": "Proprietário, al.  b), n.º 3, art.º  140, al. b), n.º 3,  art.º 140"
+        "responsavel": "Proprietário, al.  b), n.º 3, art.º  140, al. b), n.º 3,  <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -952,75 +936,75 @@
     "dados": [
       {
         "infracao": "Revalidação, troca, substituição  e a emissão de duplicado de  título de condução fora do prazo",
-        "artigo": "Art.º 126, n.º 12",
+        "artigo": "<a href='conteudo.html?secao=artigo-126'>Art.º 126</a>, n.º 12",
         "multa": "500,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Validação fora do prazo das cartas  de cidadãos dos estados  membros da SADC",
-        "artigo": "membros da SADC  Art.º 126, n.º 12",
+        "artigo": "membros da SADC  <a href='conteudo.html?secao=artigo-126'>Art.º 126</a>, n.º 12",
         "multa": "500,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução veículo com carta de  categoria que não confira com o  tipo de veículo",
         "artigo": "Art.º 127, n.º 8",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução de veículo agrícola ou  florestal com carta não averbada  para aquela categoria",
         "artigo": "Art.º 127, n.º 9",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução de quaisquer veículos  por pessoas com deformação ou  aleijão para que não estejam  habilitados",
         "artigo": "Art.º 127, n.º 10",
         "multa": "1.500,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução sem trazer consigo a  carta   (esquecimento ou perda)",
         "artigo": "Art.º 127, n.º 16",
         "multa": "200,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução ilegal   (nunca teve carta, ou caducada  há mais de 30 dias)",
         "artigo": "Art.º 127, n.º 17",
         "multa": "5.000,00MT  Prisão de 3 dias a 6  meses",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução de motociclo com  carta licença válida apenas para  ciclomotores",
-        "artigo": "Art.º 128, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-128'>Art.º 128</a>, n.º 4",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução de veículos de  categoria B, CI e C com carta  licença válida apenas para  veículos agrícolas",
-        "artigo": "Art.º 128, n.º 4",
+        "artigo": "<a href='conteudo.html?secao=artigo-128'>Art.º 128</a>, n.º 4",
         "multa": "750,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução de veículos que não  sejam a motor por pessoas com  licença diplomática ou sem  idade mínima exigível",
-        "artigo": "Art.º 129, n.º 8",
+        "artigo": "<a href='conteudo.html?secao=artigo-129'>Art.º 129</a>, n.º 8",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução de veículo com o  título caducado (carta de  condução fora do prazo)",
-        "artigo": "Art.º 133, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-133'>Art.º 133</a>, n.º 7",
         "multa": "1.000,00MT",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       },
       {
         "infracao": "Condução em desobediência a  restrições em resultado de  exame médico",
-        "artigo": "Art.º 135, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-135'>Art.º 135</a>, n.º 2",
         "multa": "2.000,00MT  Se não for aplicável  sanção mais grave",
-        "responsavel": "Condutor, al. a),  n.º 3, art.º 140"
+        "responsavel": "Condutor, al. a),  n.º 3, <a href='conteudo.html?secao=artigo-140'>art.º 140</a>"
       }
     ]
   },
@@ -1035,31 +1019,31 @@
       },
       {
         "infracao": "Promoção de competições  desportivas sem autorização",
-        "artigo": "Art.º 147, n.º 1, al. b)",
+        "artigo": "<a href='conteudo.html?secao=artigo-147'>Art.º 147</a>, n.º 1, al. b)",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
         "responsavel": "Condutor,  Proprietário ou  Peão"
       },
       {
         "infracao": "Manobras perigosas,  derrapagens, arranque brusco,  arrastamento de pneus",
-        "artigo": "Art.º 147, n.º 1, al. c)",
+        "artigo": "<a href='conteudo.html?secao=artigo-147'>Art.º 147</a>, n.º 1, al. c)",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       },
       {
         "infracao": "Avançar com o sinal vermelho no  semáforo, ou por instrução de  um agente da PT",
-        "artigo": "Art.º 147, n.º 1, al. l)",
+        "artigo": "<a href='conteudo.html?secao=artigo-147'>Art.º 147</a>, n.º 1, al. l)",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       },
       {
         "infracao": "Recusa da entrega de  documentos de habilitação para  condução ao agente da PT",
-        "artigo": "Art.º 147, n.º 1, al. r)",
+        "artigo": "<a href='conteudo.html?secao=artigo-147'>Art.º 147</a>, n.º 1, al. r)",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       },
       {
         "infracao": "Transposição ou circulação em  desrespeito da linha contínua  subjacente",
-        "artigo": "Art.º 147, n.º 1, al. v)",
+        "artigo": "<a href='conteudo.html?secao=artigo-147'>Art.º 147</a>, n.º 1, al. v)",
         "multa": "500,00MT  Pena Acessória - Inibição  para conduzir (1 ano e 2  anos conforme o número  de vezes)",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       }
@@ -1070,49 +1054,49 @@
     "dados": [
       {
         "infracao": "Causar a morte com culpa grave   (excesso de velocidade, corte de  prioridade, ultrapassagem e  mudança de direcção irregular,  inversão do sentido de marcha e  marcha atrás irregulares e com  excesso de álcool ou substâncias  psicotrópicas)",
-        "artigo": "Art.º 153, n.º 1 e 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-153'>Art.º 153</a>, n.º 1 e 2",
         "multa": "Simples Condutor   Prisão de 1 a 3 anos   Condutor habitualmente  imprudente  Prisão de 6 meses a 2  anos   Multa de 6 meses a 2  anos",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       },
       {
         "infracao": "Abandono de Sinistrado sem  morte",
-        "artigo": "Art.º 154, n.º 1, al. a)",
+        "artigo": "<a href='conteudo.html?secao=artigo-154'>Art.º 154</a>, n.º 1, al. a)",
         "multa": "Prisão de 3 dias a 2  anos  Multa de 3 dias a 2 anos",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       },
       {
         "infracao": "Abandono de Sinistrado  havendo morte do sinistrado",
-        "artigo": "Art.º 154, n.º 1, al. b)",
+        "artigo": "<a href='conteudo.html?secao=artigo-154'>Art.º 154</a>, n.º 1, al. b)",
         "multa": "Prisão maior de 2 a 8  anos",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       },
       {
         "infracao": "Abandono de Sinistrado depois  de verificada a vítima por parte  do conduto",
-        "artigo": "Art.º 154, n.º 1, al. c) e n.º  2",
+        "artigo": "<a href='conteudo.html?secao=artigo-154'>Art.º 154</a>, n.º 1, al. c) e n.º  2",
         "multa": "Pena correspondente ao  resultado do abandono  (morte, ferimento ou  dano)  [pelo menos 1 a 3 anos] v",
         "responsavel": "Condutor,   al. a), n.º 3, art.º  140"
       },
       {
         "infracao": "Encobridores nos acidentes (os  demais que estiveram na viatura  sinistrante e não se opuseram a  fuga)",
-        "artigo": "Art.º 154, n.º 3",
+        "artigo": "<a href='conteudo.html?secao=artigo-154'>Art.º 154</a>, n.º 3",
         "multa": "[Prisão de 3 dias a 6  meses]",
         "responsavel": "Passageiro,   al. d), n.º 3, art.º  140"
       },
       {
         "infracao": "Falta de prestação de socorro  por parte de outros  automobilistas que  presenciaram o sinistro sem que  resulte em morte do sinistrado",
-        "artigo": "Art.º 154, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-154'>Art.º 154</a>, n.º 5",
         "multa": "Prisão de 3 dias a 6  meses   Multa de 3 dias a 6  meses",
         "responsavel": "Outros  condutores,"
       },
       {
         "infracao": "Falta de prestação de socorro  por parte de outros  automobilistas que  presenciaram o sinistro quando  resulta a morte do sinistrado",
-        "artigo": "Art.º 154, n.º 6",
+        "artigo": "<a href='conteudo.html?secao=artigo-154'>Art.º 154</a>, n.º 6",
         "multa": "Prisão de 3 dias a 2  anos  Multa de 3 dias a 2 anos",
         "responsavel": "Outros  condutores,"
       },
       {
         "infracao": "Falta de prestação de socorro  por parte do peão que  presenciou o sinistro quando  resulta ou não a morte do  sinistrado",
-        "artigo": "Art.º 154, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-154'>Art.º 154</a>, n.º 7",
         "multa": "Prisão de 3 dias a 6  meses e multa  correspondente ou  Prisão de 3 dias a 2  anos e multa  correspondente no caso  de morte",
         "responsavel": "Peão"
       }
@@ -1123,7 +1107,7 @@
     "dados": [
       {
         "infracao": "Circulação de veículo   automóvel sem que tenha  seguros contra terceiros (Seguro  Obrigatório)",
-        "artigo": "Art.º 157 e art.º 6, da Lei  n.º 2/2003, de 21 de  Janeiro",
+        "artigo": "<a href='conteudo.html?secao=artigo-157'>Art.º 157</a> e art.º 6, da Lei  n.º 2/2003, de 21 de  Janeiro",
         "multa": "2 salários mínimos  nacionais",
         "responsavel": "Proprietário"
       }
@@ -1134,19 +1118,19 @@
     "dados": [
       {
         "infracao": "Casos de suspeita de  contrafacção; viciação  fraudulenta do livrete; Expiração  do prazo de validade; mau  estado de conservação que o  torne ininteligível",
-        "artigo": "Art.º 159, n.º 1, al. a), b) e  c",
+        "artigo": "<a href='conteudo.html?secao=artigo-159'>Art.º 159</a>, n.º 1, al. a), b) e  c",
         "multa": "Apreensão do título de  propriedade do veículo",
         "responsavel": "Condutor,  Proprietário"
       },
       {
         "infracao": "Para efeitos de cassação do  título, proibição ou inibição de  conduzir",
-        "artigo": "Art.º 160, n.º 1",
+        "artigo": "<a href='conteudo.html?secao=artigo-160'>Art.º 160</a>, n.º 1",
         "multa": "Apreensão do título de  propriedade do veículo",
         "responsavel": "Condutor,  Proprietário"
       },
       {
         "infracao": "Por determinação do INATTER,  nos termos previstos no Código  da Estrada",
-        "artigo": "Art.º 160, n.º 2, 3, 4 e 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-160'>Art.º 160</a>, n.º 2, 3, 4 e 5",
         "multa": "Apreensão do título de  propriedade do veículo",
         "responsavel": "Condutor,  Proprietário"
       },
@@ -1163,43 +1147,43 @@
     "dados": [
       {
         "infracao": "Casos de suspeita de  contrafacção; viciação  fraudulenta do livrete; Expiração  do prazo de validade; mau  estado de conservação que o  torne ininteligível",
-        "artigo": "Art.º 161, n.º 1, al. a) e b)",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 1, al. a) e b)",
         "multa": "Apreensão do livrete",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Nos casos de acidente quando o  veículo se torna inutilizado",
-        "artigo": "Art.º 161, n.º 1, al. c)",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 1, al. c)",
         "multa": "Apreensão do livrete",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Nos casos de apreensão do  veículo, veículo sem condições  de segurança, verificação na  inspecção da falta de segurança,  transportes públicos sem  comodidade",
-        "artigo": "Art.º 161, n.º 1, al. d), e), f)",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 1, al. d), e), f)",
         "multa": "Apreensão do livrete",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Chapa de matrícula irregular,  circulação em poluição sonora,  do solo e do ar",
-        "artigo": "Art.º 161, n.º 1, al. g) e h)",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 1, al. g) e h)",
         "multa": "Apreensão do livrete",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Casos de características do  veículo que não confiram com as  nelas substituídas, salvo  tratando-se de motores de  substituição devidamente  registados ou de pneus de  medida superior à indicada  adaptável às rodas",
-        "artigo": "Art.º 161, n.º 1, al. i), j)",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 1, al. i), j)",
         "multa": "Apreensão do livrete",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Apreensão de outros  documentos que acompanham o  livrete e a devolução de todos  em simultâneo",
-        "artigo": "Art.º 161, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 2",
         "multa": "Apreensão dos  documentos que  acompanham o livrete",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Condução de veículo automóvel  ou motociclo cujo documento  haja sido apreendido v",
-        "artigo": "Art.º 161, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 7",
         "multa": "1.500,00MT",
         "responsavel": "Condutor,   Proprietário"
       },
@@ -1211,7 +1195,7 @@
       },
       {
         "infracao": "Condução de outro veículo a  motor cujo documento haja sido  apreendido",
-        "artigo": "Art.º 161, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 7",
         "multa": "750,00MT",
         "responsavel": "Condutor,   Proprietário"
       }
@@ -1222,33 +1206,33 @@
     "dados": [
       {
         "infracao": "Chapa de matrícula que não  corresponde, sem chapa de  matrícula fora dos casos  permitidos, transite com  números de matrícula inválidos,  ou transite com o documento da  viatura apreendido v",
-        "artigo": "Art.º 162, n.º 1, al. a), b), c)  e d)",
+        "artigo": "<a href='conteudo.html?secao=artigo-162'>Art.º 162</a>, n.º 1, al. a), b), c)  e d)",
         "multa": "Apreensão do veículo",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Apreensão de outros  documentos que acompanham o  livrete e a devolução de todos  em simultâneo",
-        "artigo": "Art.º 161, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 2",
         "multa": "Apreensão dos  documentos que  acompanham o livrete",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Condução de veículo automóvel  ou motociclo cujo documento  haja sido apreendido",
-        "artigo": "Art.º 161, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-161'>Art.º 161</a>, n.º 7",
         "multa": "1.500,00MT",
         "responsavel": "Condutor,   Proprietário"
       },
       {
         "infracao": "Falta de registo de propriedade,  causador de acidente sem estar  assegurado, características do  livrete diferentes com a do  veículo ou quando não tenha  corrigido as anomalias  detectadas na inspecção anterior  ou nos casos de cassação da  licença",
-        "artigo": "Art.º 162, n.º 1, al. e), f),  g), h) e i)",
+        "artigo": "<a href='conteudo.html?secao=artigo-162'>Art.º 162</a>, n.º 1, al. e), f),  g), h) e i)",
         "multa": "Apreensão do veículo",
-        "responsavel": "Proprietário  Art.º 162, n.º 6"
+        "responsavel": "Proprietário  <a href='conteudo.html?secao=artigo-162'>Art.º 162</a>, n.º 6"
       },
       {
         "infracao": "90 dias depois da apreensão se  for corrigida a anomalia que  justificou a apreensão do veículo  por negligencia do proprietário",
-        "artigo": "Art.º 162, n.º 2",
+        "artigo": "<a href='conteudo.html?secao=artigo-162'>Art.º 162</a>, n.º 2",
         "multa": "Reversão do veículo à  favor do Estado",
-        "responsavel": "Proprietário  Art.º 162, n.º 6"
+        "responsavel": "Proprietário  <a href='conteudo.html?secao=artigo-162'>Art.º 162</a>, n.º 6"
       }
     ]
   },
@@ -1257,9 +1241,9 @@
     "dados": [
       {
         "infracao": "Mais de 30 dias ininterruptos em  local público, 5 dias em parques  sem o pagamento das taxas,  mais de 2 horas nos locais de  estacionamento limitado, mais  de 48 horas quando apresentem  sinais exteriores de abandono,  veículos sem matricula ou  matrícula ininteligível",
-        "artigo": "Art.º 164, n.º 5",
+        "artigo": "<a href='conteudo.html?secao=artigo-164'>Art.º 164</a>, n.º 5",
         "multa": "Taxa da Remoção e  Multa de 2.000,00MT",
-        "responsavel": "Proprietário  Art.º 164, n.º 6"
+        "responsavel": "Proprietário  <a href='conteudo.html?secao=artigo-164'>Art.º 164</a>, n.º 6"
       }
     ]
   },
@@ -1268,7 +1252,7 @@
     "dados": [
       {
         "infracao": "Falta de identificação do  condutor (arguido) que cometeu  a infracção no prazo de 15 dias",
-        "artigo": "Art.º 171, n.º 7",
+        "artigo": "<a href='conteudo.html?secao=artigo-171'>Art.º 171</a>, n.º 7",
         "multa": "Taxa da Remoção e  Multa de 2.000,00MT",
         "responsavel": "1.000,00MT"
       }

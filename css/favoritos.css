@@ -1,0 +1,74 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.containerBody{
+    padding: 20px;
+}
+
+.back-link {
+  color: #004080;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+h1 {
+
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+li:hover {
+  background-color: #f0f8ff;
+}
+
+a.article-link {
+  color: #004080;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a.article-link:hover {
+  text-decoration: underline;
+}
+
+.favorite-btn {
+  background-color: #d64848;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.no-fav {
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+  color: #777;
+}
