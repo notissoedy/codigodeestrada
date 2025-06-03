@@ -29,11 +29,22 @@
   </a>
 </div>
 
+
   <header>
  
     <h1>  Transgressões e Multas - Código da Estrada </h1>
  
   </header>
+
+  <!-- <div class="filters">
+    <input type="text" id="searchInput" placeholder="Buscar infração, artigo, multa..." oninput="applyFilters()" />
+    <select id="responsavelFilter" onchange="applyFilters()">
+      <option value="">Todos os responsáveis</option>
+      <option value="Condutor">Condutor</option>
+      <option value="Empresa">Empresa</option>
+      <option value="Empresa ou particular">Empresa ou particular</option>
+    </select>
+  </div> -->
 
   <div class="tabelas-container" id="tabelas-container"></div>
   <script>
@@ -1336,6 +1347,21 @@
           tbody.classList.add('collapsed');
           icon.textContent = '⬇️';
         }
+      });
+    }
+
+    
+    function applyFilters() {
+      const searchValue = document.getElementById('searchInput').value.toLowerCase();
+      const filterValue = document.getElementById('responsavelFilter').value.toLowerCase();
+
+      document.querySelectorAll('table tbody tr').forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const responsavel = row.cells[3]?.innerText.toLowerCase();
+        const matchesSearch = text.includes(searchValue);
+        const matchesFilter = !filterValue || responsavel.includes(filterValue);
+
+        row.classList.toggle('collapsed', !(matchesSearch && matchesFilter));
       });
     }
 

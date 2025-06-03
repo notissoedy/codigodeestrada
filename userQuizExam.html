@@ -117,82 +117,69 @@
     }
 
     function startQuiz() {
-    const category = document.getElementById("category-select").value;
-    if (!category) return alert("Selecione uma categoria.");
-    currentCategory = category;
-    currentQuiz = [...quizData[category]];
-    currentIndex = 0;
-    score = 0;
+      currentCategory = document.getElementById("category-select").value;
+      currentQuiz = quizData[currentCategory];
+      if (!currentQuiz || currentQuiz.length === 0) return alert("Categoria vazia");
 
-    
+      currentIndex = 0;
+      score = 0;
       startTime = Date.now();
       clearInterval(timerInterval);
       updateTimer();
       timerInterval = setInterval(updateTimer, 1000);
 
-    document.getElementById("quiz-container").style.display = "block";
-    document.getElementById("result").style.display = "none";
-    showQuestion();
-  }
-
-  function showQuestion() {
-    const question = currentQuiz[currentIndex];
-    document.getElementById("question-text").innerText = question.question;
-    const image = document.getElementById("question-image");
-    if (question.image) {
-      image.src = question.image;
-      image.style.display = "block";
-    } else {
-      image.style.display = "none";
-    }
-
-    const optionsDiv = document.getElementById("options");
-    optionsDiv.innerHTML = ""; // Limpa opções anteriores
-
-    question.options.forEach((option, index) => {
-      const btn = document.createElement("button");
-      btn.innerText = option;
-      btn.className = "option-btn";
-      btn.onclick = () => handleAnswer(index, question.correct);
-      optionsDiv.appendChild(btn);
-
-    });
-
-    document.getElementById("progress").textContent = `Pergunta ${currentIndex + 1} de ${currentQuiz.length}`;
-  }
-function handleAnswer(selectedIndex, correctIndex) {
-    const buttons = document.querySelectorAll(".option-btn");
-
-    // Impede múltiplos cliques
-    buttons.forEach(btn => btn.disabled = true);
-
-    if (selectedIndex === correctIndex) {
-      buttons[selectedIndex].style.backgroundColor = "green";
-      score++;
-    } else {
-      buttons[selectedIndex].style.backgroundColor = "red";
-      buttons[correctIndex].style.backgroundColor = "green";
-    }
-  }
-
-  function nextQuestion() {
-    if (++currentIndex < currentQuiz.length) {
+      document.getElementById("result").style.display = "none";
+      document.getElementById("quiz-container").style.display = "block";
+      document.getElementById("ranking").style.display = "none";
       showQuestion();
-    } else {
-      clearInterval(timerInterval);
-      showResult();
     }
-  }
 
- 
+    function showQuestion() {
+      const q = currentQuiz[currentIndex];
+      document.getElementById("question-text").textContent = q.question;
+      const img = document.getElementById("question-image");
+      if (q.image) {
+        img.src = q.image;
+        img.style.display = "block";
+      } else {
+        img.style.display = "none";
+      }
 
-  function showResult() {
-    const resultDiv = document.getElementById("result");
-    const timeTaken = Math.floor((Date.now() - startTime) / 1000);
-    resultDiv.innerText = `Você acertou ${score} de ${currentQuiz.length} perguntas, em ${timeTaken}s.`;
-    resultDiv.style.display = "block";
-    document.getElementById("quiz-container").style.display = "none";
-  }
+      const options = document.getElementById("options");
+      options.innerHTML = "";
+
+      q.options.forEach((opt, i) => {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type='radio' name='option' value='${i}'> ${opt}`;
+        options.appendChild(label);
+
+        
+      });
+
+      document.getElementById("progress").textContent = `Pergunta ${currentIndex + 1} de ${currentQuiz.length}`;
+    }
+
+    function nextQuestion() {
+      const selected = document.querySelector("input[name='option']:checked");
+      if (!selected) return alert("Selecione uma resposta");
+
+      const answer = parseInt(selected.value);
+      if (answer === currentQuiz[currentIndex].correct) score++;
+
+      currentIndex++;
+      if (currentIndex < currentQuiz.length) {
+        showQuestion();
+      } else {
+        clearInterval(timerInterval);
+        document.getElementById("quiz-container").style.display = "none";
+        const timeTaken = Math.floor((Date.now() - startTime) / 1000);
+        document.getElementById("result").textContent = `Você acertou ${score} de ${currentQuiz.length} perguntas em ${timeTaken} segundos.`;
+        document.getElementById("result").style.display = "block";
+        updateRanking(score, currentCategory, timeTaken);
+      }
+    }
+
+    
 
     function updateTimer() {
       const now = Date.now();
