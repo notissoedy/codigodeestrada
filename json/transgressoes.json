@@ -1,0 +1,471 @@
+[
+    {
+      "categoria": "OBSTÁCULOS NA VIA PÚBLICA",
+      "dados": [
+        {
+          "infracao": "Impedir ou embaraçar a circulação de veículos",
+          "artigo": "Art.º 3, n.º 3",
+          "multa": "3.000,00MT",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Colocação de obstáculos para impedir ou embaraçar o trânsito",
+          "artigo": "Art.º 4, n.º 2",
+          "multa": "1.000,00MT",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Eventos (festas, provas, cortejos) na estrada sem autorização",
+          "artigo": "Art.º 5, n.º 4",
+          "multa": "5.000,00MT",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },      
+        {
+          "infracao": "Circulação de veículos não autorizados ",
+          "artigo": "Art.º 7, n.º 4",
+          "multa": "1.000,00MT",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+  
+      ]
+    },
+    {
+      "categoria": "DESOBEDIÊNCIA AO AGENTE DA POLÍCIA DE TRÂNSITO",
+      "dados": [
+        {
+          "infracao": "Não obedecer ao sinal de paragem do agente da PT",
+          "artigo": "Art.º 11, n.º 3",
+          "multa": "1.000,00MT",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Obedecer tardiamente ao sinal de paragem do agente da PT ",
+          "artigo": "Art.º 11, n.º 3",
+          "multa": "500,00MT",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Falta de sinalização de obstáculos eventuais",
+          "artigo": "Art.º 12, n.º 3",
+          "multa": "10.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
+          "responsavel":"Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Interrupção ou Condicionamento de vias de circulação  ",
+          "artigo": "Art.º 12, n.º 6",
+          "multa": "5.000,00MT",
+          "responsavel": " Empresa ou particular responsável"
+        },
+        {
+          "infracao": "Desobediência aos veículos prioritários (ambulâncias e comitivas governamentais)",
+          "artigo": "Art.º 15, n.º 4",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Desobediência aos sinais de regulação do agente da PT  ",
+          "artigo": "Art.º 14, n.º 3",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    },
+    {
+      "categoria": "CONDUÇÃO SEGURA (Ultrapassagem, distâncias) ",
+      "dados": [
+        {
+          "infracao": "Condução com parte do corpo fora do veículo",
+          "artigo": "Art.º 16, n.º 3 e 4",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Condução que prejudique a segurança na estrada ",
+          "artigo": "Art.º 16, n.º 2 e 4",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Condução à direita ou não encostada à berma esquerda ",
+          "artigo": "Art.º 17, n.º 3",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Condução na fila de trânsito à direita  ",
+          "artigo": "Art.º 18, n.º 3",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "  Mudança de fila sem a tomada de precauções ",
+          "artigo": "Art.º 18, n.º 2 e 3",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "  Início da marcha sem sinalização ",
+          "artigo": "Art.º 19, n.º 2",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Falta de manutenção de distância segura entre os veículos ",
+          "artigo": "Art.º 20, n.º 3",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes) ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "  Travessia de veículos em passeios à margem do regulamento local ",
+          "artigo": "Art.º 21, n.º 2",
+          "multa": "500,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "  Ultrapassagem nos cruzamentos e entroncamentos ",
+          "artigo": "Art.º 22, n.º 4 e 5",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Condução à direita de entroncamentos e cruzamentos ",
+          "artigo": "Art.º 22, n.º 1 e 5",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    },
+    {
+      "categoria": " SINAIS LUMINOSOS E SONOROS ",
+      "dados": [
+        {
+          "infracao": "Não uso do sinal luminoso (pisca) nas manobras.",
+          "artigo": "Art.º 23, n.º 3",
+          "multa": "500,00MT  Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Mau uso dos sinais sonoros (Buzina), ou uso para protestos. ",
+          "artigo": "Art.º 24, n.º 8",
+          "multa": "500,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Uso de sinais sonoros especiais ",
+          "artigo": "Art.º 25, n.º 3",
+          "multa": "1000,00MT e remoção imediata, ou apreensão do livrete ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "  Uso irregular dos sinais luminosos em substituição aos sinais sonoros  ",
+          "artigo": "Art.º 26, n.º 2",
+          "multa": "500,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Uso de sinais luminosos especiais ",
+          "artigo": "Art.º 27, n.º 5 e 7",
+          "multa": "2000,00MT e remoção imediata, ou apreensão do livrete ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Uso de máximos (luzes) em locais bem iluminados ",
+          "artigo": "Art.º 27, n.º 6 e Art.º 28",
+          "multa": "1000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    },
+    {
+      "categoria": " VELOCIDADES ",
+      "dados": [
+        {
+          "infracao": "Excesso de velocidade simples (incapacidade para travar atempadamente o carro) ",
+          "artigo": "Art.º 30, n.º 2",
+          "multa": "1000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Trânsito em marcha lenta que embaraça o trânsito  ",
+          "artigo": "Art.º 31, n.º 2",
+          "multa": "500,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Excesso de velocidade nos locais especialmente protegidos  ",
+          "artigo": "Art.º 30, n.º 4",
+          "multa": "1000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Velocidade máxima dentro das  localidades (60 km/h)/Pesados 60 km/h  ",
+          "artigo": "Art.º 33, n.º 1",
+          "multa": " 20km/h – 1.000,00MT Leve ; 40km/h – 2.000,00M Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) 60km/h – 4.000,00MT Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) <60km/h – 8.000,00MT Grave ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Velocidade máxima fora das localidades (120 km/h)/Pesados 100km/h ",
+          "artigo": "Art.º 33, n.º 2 Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes)",
+          "multa": " 20km/h – 1.000,00MT Leve ; 40km/h – 2.000,00M Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) 60km/h – 4.000,00MT - Grave; <60km/h – 8.000,00MT Grave ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "Condução em velocidade inferior a 40 km/h na auto estrada ",
+          "artigo": "Art.º  33, n.º 3 e Art.º 31,n.º 2 ",
+          "multa": "500,00MT Pena Acessória - Inibição para conduzir (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Condução em velocidades superior a 90 km/h, por Condutor, al. a), n.º 3, art.º 140 não profissionais (menos de 1 ano de habilitação para condução) ",
+          "artigo": "Art.º  33, n.º 3 e Art.º 31,n.º 2 ",
+          "multa": "500,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme as vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "  Inobservância dos limites especiais de velocidade em determinados transporte, zonas urbanas ou regiões. ",
+          "artigo": "Art.º  37",
+          "multa": " REGRAS GERAIS do art.º 33",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    }
+    ,
+    {
+      "categoria": " REGRAS DE PRIORIDADE DE PASSAGEM ",
+      "dados": [
+        {
+          "infracao": " Desobediência às regras de prioridade de passagem",
+          "artigo": "Art.º 38, n.º 6",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Desobediência às regras de cedência de passagem",
+          "artigo": "Art.º 39, n.º 4",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Desobediência às regras de cedência de passagem às colunas militares ou militarizadas  ",
+          "artigo": "Art.º 40, n.º 1 e 5",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": "Desobediência às regras de cedência de passagem à veículos motorizados por velocípedes e veículos à tracção animal.  ",
+          "artigo": "Art.º 40, n.º 2 e 6",
+          "multa": "500,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": "Desobediência às regras de sobre o cruzamento dos veículos  ",
+          "artigo": "Art.º 41, n.º 7",
+          "multa": "1000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    }
+    ,
+    {
+      "categoria": " ULTRAPASSAGENS E MUDANÇA DE DIRECÇÃO  ",
+      "dados": [
+        {
+          "infracao": " Ultrapassagem irregular ",
+          "artigo": "Art.º 43, n.º 9",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": "  Ultrapassagem proibida (locais)",
+          "artigo": "Art.º 44, n.º 5",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Mudança de direcção irregular",
+          "artigo": "Art.º 45, n.º 5",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Mudança de direcção para a esquerda de forma irregular ",
+          "artigo": "Art.º 46, n.º 2",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Inversão do sentido de marcha irregular ",
+          "artigo": "Art.º 47, n.º 3",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Marcha atrás irregular ",
+          "artigo": "Art.º 48, n.º 5",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    },
+    {
+      "categoria": "REGRAS DE ESTACIONAMENTO ",
+      "dados": [
+        {
+          "infracao": " Estacionamento irregular (simples)",
+          "artigo": "Art.º 49, n.º 6",
+          "multa": "1.500,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Estacionamento em locais proibidos",
+          "artigo": "Art.º 50, n.º 3",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Estacionamento em locais proibidos em zona municipal (dentro das localidades)",
+          "artigo": "Art.º 51, n.º 1 e 4",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Estacionamento em locais proibidos fora das localidades ",
+          "artigo": "Art.º 51, n.º 2 e 5",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Paragem irregular de veículo utilizado no transporte colectivo de passageiros  ",
+          "artigo": "Art.º 53, n.º 3",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    },
+    
+  
+    {
+      "categoria": " DESCARREGAMENTO E LOTAÇÃO E PESO ",
+      "dados": [
+        {
+          "infracao": " Descarregamento de pessoas e de carga (lentidão) de forma irregular ",
+          "artigo": "Art.º 54, n.º 3",
+          "multa": "500,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Lotação excessiva de passageiros, passageiros fora dos assentos  ",
+          "artigo": "Art.º 55, n.º 6",
+          "multa": "500,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Transporte irregular de carga e o descarregamento irregular ",
+          "artigo": "Art.º 56, n.º 5",
+          "multa": "1.000,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Excesso de peso ou excesso de dimensões do veículo (falta de autorização) ",
+          "artigo": "Art.º 57 e 58, n.º 7",
+          "multa": "10.000,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        
+      ]
+    },
+    {
+      "categoria": "ILUMINAÇÃO, FAROIS E LUZES  ",
+      "dados": [
+        {
+          "infracao": "  Ausência de todos os faróis de iluminação e sinalização ",
+          "artigo": "Art.º 59, n.º 3",
+          "multa": "2.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Ausência de algum dos faróis de iluminação e sinalização  ",
+          "artigo": "Art.º 59, n.º 4",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": "  Uso de luzes não previstas no Código e no Regulamento  ",
+          "artigo": "Art.º 60, n.º 3",
+          "multa": "1.000,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": "  Uso irregular dos mínimos e médios quando não se    ",
+          "artigo": "Art.º 61, n.º 4",
+          "multa": "500,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": "  Uso de máximos nos cruzamentos com outros veículos ou a menos de 100 metros do antecedente  ",
+          "artigo": "Art.º 61, n.º 5",
+          "multa": "1.000,00MT Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Circulação de veículo com avaria nas luzes ",
+          "artigo": "Art.º 62, n.º 4",
+          "multa": "750,00MT ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Não uso de luzes de emergência em casos de perigo, obstáculo, intempéries etc.  ",
+          "artigo": "Art.º 63, n.º 5",
+          "multa": "750,00MT Pena Acessória - Inibição para conduzir  (3 meses, 6 meses, 1 ano e 2 anos conforme as vezes) Pena Acessória - Inibição para conduzir (1 ano e 2 anos conforme o número de vezes)  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    },
+    {
+      "categoria": "OUTRAS INFRACÇÕES",
+      "dados": [
+        {
+          "infracao": " Falta de cobertura com lonas ou oleados no transporte de cargas especiais ",
+          "artigo": "Art.º 64, n.º 3",
+          "multa": "2.000,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        },
+        {
+          "infracao": " Desobediência referente ao trânsito de veículos em serviço de urgência  ",
+          "artigo": "Art.º 65, n.º 4",
+          "multa": "1.000,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": " Dever de ceder passagem à direita dos veículos em serviço de urgência  ",
+          "artigo": "Art.º 66, n.º 4",
+          "multa": "1.000,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+        ,
+        {
+          "infracao": "  Dever de ceder prioridade aos veículos ferroviários na passagem de nível  ",
+          "artigo": "Art.º 67, n.º 5",
+          "multa": "750,00MT  ",
+          "responsavel": "Condutor, al. a), n.º 3, art.º 140"
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor de Infrações</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    textarea { width: 100%; height: 300px; margin-bottom: 10px; }
+    input, button { margin: 5px 0; padding: 5px; width: 100%; }
+    .container { max-width: 800px; margin: auto; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Editor de Transgressões do Código da Estrada</h1>
+
+    <input type="file" id="upload" accept="application/json">
+    <textarea id="jsonData" placeholder="Dados JSON serão exibidos aqui..."></textarea>
+
+    <h3>Adicionar nova infração</h3>
+    <input type="text" id="categoria" placeholder="Categoria">
+    <input type="text" id="infracao" placeholder="Infração">
+    <input type="text" id="artigo" placeholder="Artigo">
+    <input type="text" id="multa" placeholder="Multa">
+    <input type="text" id="responsavel" placeholder="Responsável">
+    <button onclick="adicionarInfracao()">Adicionar Infração</button>
+    <button onclick="baixarJSON()">Baixar JSON</button>
+  </div>
+
+  <script>
+    let dados = [];
+
+    document.getElementById('upload').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        dados = JSON.parse(e.target.result);
+        document.getElementById('jsonData').value = JSON.stringify(dados, null, 2);
+      };
+      reader.readAsText(file);
+    });
+
+    function adicionarInfracao() {
+      const categoria = document.getElementById('categoria').value.trim();
+      const infracao = document.getElementById('infracao').value.trim();
+      const artigo = document.getElementById('artigo').value.trim();
+      const multa = document.getElementById('multa').value.trim();
+      const responsavel = document.getElementById('responsavel').value.trim();
+
+      if (!categoria || !infracao || !artigo || !multa || !responsavel) {
+        alert("Preencha todos os campos!");
+        return;
+      }
+
+      let cat = dados.find(c => c.categoria === categoria);
+      if (!cat) {
+        cat = { categoria: categoria, dados: [] };
+        dados.push(cat);
+      }
+
+      cat.dados.push({ infracao, artigo, multa, responsavel });
+      document.getElementById('jsonData').value = JSON.stringify(dados, null, 2);
+
+      document.getElementById('infracao').value = '';
+      document.getElementById('artigo').value = '';
+    //   document.getElementById('multa').value = '';
+    //   document.getElementById('responsavel').value = '';
+    }
+
+    function baixarJSON() {
+      const blob = new Blob([JSON.stringify(dados, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'transgressoes_atualizadas.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>

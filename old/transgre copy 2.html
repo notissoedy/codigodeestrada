@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transgressões e Multas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filters input, .filters select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    thead {
+      background-color: #00529B;
+      color: white;
+      cursor: pointer;
+    }
+
+    thead:hover {
+      background-color: #003f7d;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+
+    .section-header {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .toggle-icon {
+      float: right;
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .section-body {
+      transition: max-height 0.4s ease-out;
+      overflow: hidden;
+    }
+
+    .collapsed {
+      display: none;
+      max-height: 0;
+      padding: 0 !important;
+    }
+
+    .expanded {
+      max-height: 1000px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Transgressões e Multas</h1>
+
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="Buscar infração, artigo, multa..." oninput="applyFilters()" />
+    <select id="responsavelFilter" onchange="applyFilters()">
+      <option value="">Todos os responsáveis</option>
+      <option value="Condutor">Condutor</option>
+      <option value="Empresa">Empresa</option>
+      <option value="Empresa ou particular">Empresa ou particular</option>
+    </select>
+  </div>
+
+  <!-- Tabela 1 -->
+  <table data-section-id="obstaculos">
+    <thead onclick="toggleSection(this)">
+      <tr>
+        <th colspan="4" class="section-header">
+          🚧 OBSTÁCULOS NA VIA PÚBLICA
+          <span class="toggle-icon">⬇️</span>
+        </th>
+      </tr>
+      <tr>
+        <th>Infração</th>
+        <th>Artigo</th>
+        <th>Multa</th>
+        <th>Responsável</th>
+      </tr>
+    </thead>
+    <tbody class="section-body collapsed">
+      <tr>
+        <td>Impedir ou embaraçar a circulação</td>
+        <td>Art.º 3, n.º 3</td>
+        <td>3.000,00 MT</td>
+        <td>Condutor</td>
+      </tr>
+      <tr>
+        <td>Obstáculos na via</td>
+        <td>Art.º 4, n.º 2</td>
+        <td>1.000,00 MT</td>
+        <td>Condutor</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Tabela 2 -->
+  <table data-section-id="desobediencia">
+    <thead onclick="toggleSection(this)">
+      <tr>
+        <th colspan="4" class="section-header">
+          👮 DESOBEDIÊNCIA AO AGENTE
+          <span class="toggle-icon">⬇️</span>
+        </th>
+      </tr>
+      <tr>
+        <th>Infração</th>
+        <th>Artigo</th>
+        <th>Multa</th>
+        <th>Responsável</th>
+      </tr>
+    </thead>
+    <tbody class="section-body collapsed">
+      <tr>
+        <td>Não obedecer ao sinal de paragem</td>
+        <td>Art.º 11, n.º 3</td>
+        <td>1.000,00 MT</td>
+        <td>Condutor</td>
+      </tr>
+      <tr>
+        <td>Obedecer tardiamente ao sinal</td>
+        <td>Art.º 11, n.º 3</td>
+        <td>500,00 MT</td>
+        <td>Condutor</td>
+      </tr>
+      <tr>
+        <td>Falta de sinalização de obstáculos</td>
+        <td>Art.º 12, n.º 3</td>
+        <td>10.000,00 MT + Inibição</td>
+        <td>Empresa</td>
+      </tr>
+      <tr>
+        <td>Interrupção ou condicionamento da via</td>
+        <td>Art.º 12, n.º 6</td>
+        <td>5.000,00 MT</td>
+        <td>Empresa ou particular</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function toggleSection(thead) {
+      const table = thead.closest('table');
+      const tbody = table.querySelector('.section-body');
+      const icon = thead.querySelector('.toggle-icon');
+      const id = table.getAttribute('data-section-id');
+
+      const isCollapsed = tbody.classList.contains('collapsed');
+
+      if (isCollapsed) {
+        tbody.classList.remove('collapsed');
+        tbody.classList.add('expanded');
+        icon.textContent = '⬆️';
+        localStorage.setItem('section_' + id, 'open');
+      } else {
+        tbody.classList.remove('expanded');
+        tbody.classList.add('collapsed');
+        icon.textContent = '⬇️';
+        localStorage.setItem('section_' + id, 'closed');
+      }
+    }
+
+    // Restaurar estados salvos
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('table').forEach(table => {
+        const id = table.getAttribute('data-section-id');
+        const state = localStorage.getItem('section_' + id);
+        const tbody = table.querySelector('.section-body');
+        const icon = table.querySelector('.toggle-icon');
+
+        if (state === 'open') {
+          tbody.classList.remove('collapsed');
+          tbody.classList.add('expanded');
+          icon.textContent = '⬆️';
+        } else {
+          tbody.classList.remove('expanded');
+          tbody.classList.add('collapsed');
+          icon.textContent = '⬇️';
+        }
+      });
+    });
+
+    function applyFilters() {
+      const searchValue = document.getElementById('searchInput').value.toLowerCase();
+      const filterValue = document.getElementById('responsavelFilter').value.toLowerCase();
+
+      document.querySelectorAll('table tbody tr').forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const responsavel = row.cells[3]?.innerText.toLowerCase();
+        const matchesSearch = text.includes(searchValue);
+        const matchesFilter = !filterValue || responsavel.includes(filterValue);
+
+        row.classList.toggle('hidden', !(matchesSearch && matchesFilter));
+      });
+    }
+  </script>
+
+</body>
+</html>
