@@ -1,0 +1,204 @@
+:root {
+  --primary: #007bff;
+  --bg: #f8f9fa;
+  --text: #212529;
+  --card: #ffffff;
+  --border: #dee2e6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.categoria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.categoria {
+  width: 150px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.categoria img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.upload-json {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.slideshow-container {
+max-width: 100%;
+max-height: 100%;
+position: relative;
+margin: auto;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+} */
+
+.prev, .next {
+background-color: rgba(0,0,0,0.8);
+}
+.fulll{
+height:100%;
+}
+/* Caption text */
+.text {
+color: #f1f1f1; 
+font-size: 15px;
+padding: 20px; 
+position: absolute;
+bottom: 0;
+text-align: center;
+background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+overflow: hidden;
+width: 100%;
+max-width: 600px;
+}
+
+.text2 {
+color: #f1f1f1; 
+font-size: 15px;
+padding: 20px; 
+
+
+text-align: center;
+background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+overflow: hidden;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color:rgba(0, 0, 0, 0.5);
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+.exit{
+/* background-color: rgba(0,0,0,0.8); */
+color:rgba(0, 0, 0, 0.5);
+font-size: 20px;
+font-weight:bold;
+margin:20px;
+padding: 12px 12px;
+position: absolute;
+top: 0;
+right:0;
+}
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+.mySlides {
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+width: 100%;
+max-width: 600px;
+margin: auto;
+aspect-ratio: 4 / 3; /* Mantém proporção responsiva */
+background-color: #fff;
+border-radius: 12px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+height: auto;
+}
+
+.mySlides img {
+max-height: 100%;
+max-width: 100%;
+object-fit: contain;
+display: block;
+margin: auto;
+}
+
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
