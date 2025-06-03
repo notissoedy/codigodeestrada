@@ -76,5 +76,9 @@ a:hover {
       position: fixed;
     } */
 
-    
+     input{
+        padding: 8px;
+        font-size: 16px;
+   
+      }
           

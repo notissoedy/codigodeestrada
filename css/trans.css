@@ -40,6 +40,11 @@ tbody tr td {
 .collapsed {
   display: none;
 }
+
+.hidden {
+    display: none;
+  }
+
 .expanded {
   display: table-row-group;
 }
