@@ -8,7 +8,7 @@
   body {
     background-color: #f5f7fa;
     color: #333;
-    padding: 20px;
+  
   }
   
   header {
@@ -183,6 +183,7 @@
   }
   
   #container {
+    padding: 20px;
     width: 100%;
     overflow-x: hidden; /* evita overflow horizontal */
   }
