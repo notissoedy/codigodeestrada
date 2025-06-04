@@ -1,225 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Código de Estrada</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/quiz.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simbolos de Código de Estrada</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <span class="exit" onclick="window.history.back()">X</span>
-  <br> 
-
-  <h1>Quiz Código de Estrada</h1>
-
-  <input type="file" id="json-loader" accept=".json">
-  <select id="category-select"></select>
-  <button onclick="startQuiz()">▶️ Iniciar</button>
-
-
-  <div id="quiz-container" style="display:none;">
-  
-    <div class="question-box">
-      <div>
-        <div id="progress"></div>
-        <div id="timer"></div>
-      </div>
-      <br>
-      <div id="question-text"></div>
-      <img id="question-image" class="question-image" style="display:none;">
-      <div id="options" class="options"></div>
+  <header>
+    <h1>Simbolos de Código de Estrada</h1>
+    <div class="controls">
+      <div id="filter-buttons"></div>
+      <input type="text" id="search-input" placeholder="Buscar significado...">
     </div>
-    <button onclick="nextQuestion()">Próxima</button>
+  </header>
+
+  <main id="container"></main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <span id="modal-close">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <p id="modal-desc"></p>
   </div>
 
-  <div class="result" id="result" style="display:none;"></div>
-
-  <div id="ranking" style="display:none;">
-    <h2>Ranking</h2>
-    <ol id="ranking-list"></ol>
-  </div>
-
-  <script>
-    let quizData = {};
-    let currentCategory = null;
-    let currentIndex = 0;
-    let score = 0;
-    let currentQuiz = [];
-    let startTime;
-    let timerInterval;
-
-    document.getElementById("json-loader").addEventListener("change", function () {
-      const file = this.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        try {
-          quizData = JSON.parse(e.target.result);
-          populateCategories();
-        } catch (err) {
-          alert("Erro ao carregar JSON: " + err.message);
-        }
-      };
-      reader.readAsText(file);
-    });
-
-    quizData ={
-  "sinais": [
-    {
-      "question": "ola",
-      "image": null,
-      "options": [
-        "wwww",
-        "ggg",
-        "sss",
-        "ttt"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "outra pergunta",
-      "image": null,
-      "options": [
-        "edson",
-        "hjr",
-        "24",
-        "hffff"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "ola",
-      "image": "data:image/png;base64,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",
-      "options": [
-        "wwww",
-        "www",
-        "www",
-        "ggg"
-      ],
-      "correct": 2
-    }
-  ]
-};
-    populateCategories();
-
-    function populateCategories() {
-      const select = document.getElementById("category-select");
-      select.innerHTML = "";
-      for (let cat in quizData) {
-        const option = document.createElement("option");
-        option.value = cat;
-        option.textContent = cat;
-        select.appendChild(option);
-      }
-    }
-
-    function startQuiz() {
-    const category = document.getElementById("category-select").value;
-    if (!category) return alert("Selecione uma categoria.");
-    currentCategory = category;
-    currentQuiz = [...quizData[category]];
-    currentIndex = 0;
-    score = 0;
-
-    
-      startTime = Date.now();
-      clearInterval(timerInterval);
-      updateTimer();
-      timerInterval = setInterval(updateTimer, 1000);
-
-    document.getElementById("quiz-container").style.display = "block";
-    document.getElementById("result").style.display = "none";
-    showQuestion();
-  }
-
-  function showQuestion() {
-    const question = currentQuiz[currentIndex];
-    document.getElementById("question-text").innerText = question.question;
-    const image = document.getElementById("question-image");
-    if (question.image) {
-      image.src = question.image;
-      image.style.display = "block";
-    } else {
-      image.style.display = "none";
-    }
-
-    const optionsDiv = document.getElementById("options");
-    optionsDiv.innerHTML = ""; // Limpa opções anteriores
-
-    question.options.forEach((option, index) => {
-      const btn = document.createElement("button");
-      btn.innerText = option;
-      btn.className = "option-btn";
-      btn.onclick = () => handleAnswer(index, question.correct);
-      optionsDiv.appendChild(btn);
-
-    });
-
-    document.getElementById("progress").textContent = `Pergunta ${currentIndex + 1} de ${currentQuiz.length}`;
-  }
-function handleAnswer(selectedIndex, correctIndex) {
-    const buttons = document.querySelectorAll(".option-btn");
-
-    // Impede múltiplos cliques
-    buttons.forEach(btn => btn.disabled = true);
-
-    if (selectedIndex === correctIndex) {
-      buttons[selectedIndex].style.backgroundColor = "green";
-      score++;
-    } else {
-      buttons[selectedIndex].style.backgroundColor = "red";
-      buttons[correctIndex].style.backgroundColor = "green";
-    }
-  }
-
-  function nextQuestion() {
-    if (++currentIndex < currentQuiz.length) {
-      showQuestion();
-    } else {
-      clearInterval(timerInterval);
-      showResult();
-    }
-  }
-
- 
-
-  function showResult() {
-    const resultDiv = document.getElementById("result");
-    const timeTaken = Math.floor((Date.now() - startTime) / 1000);
-    resultDiv.innerText = `Você acertou ${score} de ${currentQuiz.length} perguntas, em ${timeTaken}s.`;
-    resultDiv.style.display = "block";
-    document.getElementById("quiz-container").style.display = "none";
-  }
-
-    function updateTimer() {
-      const now = Date.now();
-      const elapsed = Math.floor((now - startTime) / 1000);
-      document.getElementById("timer").textContent = `Tempo: ${elapsed}s`;
-    }
-
-    function updateRanking(score, category, time) {
-      const key = `ranking_${category}`;
-      let ranking = JSON.parse(localStorage.getItem(key)) || [];
-      const name = prompt("Digite seu nome para o ranking:") || "Anônimo";
-      const date = new Date().toLocaleString();
-      ranking.push({ name, score, time, date });
-      ranking.sort((a, b) => b.score - a.score || a.time - b.time);
-      ranking = ranking.slice(0, 10);
-      localStorage.setItem(key, JSON.stringify(ranking));
-
-      const list = document.getElementById("ranking-list");
-      list.innerHTML = "";
-      ranking.forEach((entry, i) => {
-        const li = document.createElement("li");
-        li.textContent = `${entry.name}: ${entry.score} pts - ${entry.time}s - ${entry.date}`;
-        list.appendChild(li);
-      });
-
-      document.getElementById("ranking").style.display = "block";
-    }
-  </script>
+  <script src="json/mawonelo1501.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
