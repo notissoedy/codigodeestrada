@@ -1,30 +1,190 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simbolos de Código de Estrada</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Código de Estrada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/quiz.css">
+
 </head>
 <body>
-  <header>
-    <h1>Simbolos de Código de Estrada</h1>
-    <div class="controls">
-      <div id="filter-buttons"></div>
-      <input type="text" id="search-input" placeholder="Buscar significado...">
+
+  <span class="exit" onclick="window.history.back()">X</span>
+  <br>   <br> 
+
+  <h1>Quiz Código de Estrada</h1>
+
+  <!-- <input type="file" id="json-loader" accept=".json"> -->
+  <select id="category-select"></select>
+  <button onclick="startQuiz()">▶️ Iniciar</button>
+
+
+  <div id="quiz-container" style="display:none;">
+  
+    <div class="question-box">
+      <div>
+        <div id="progress"></div>
+        <div id="timer"></div>
+      </div>
+      <br>
+      <div id="question-text"></div>
+      <img id="question-image" class="question-image" style="display:none;">
+      <div id="options" class="options"></div>
     </div>
-  </header>
-
-  <main id="container"></main>
-
-  <!-- Modal -->
-  <div id="modal" class="modal hidden">
-    <span id="modal-close">&times;</span>
-    <img id="modal-img" src="" alt="">
-    <p id="modal-desc"></p>
+    <button onclick="nextQuestion()">Próxima</button>
   </div>
 
-  <script src="json/mawonelo1501.js"></script>
-  <script src="script.js"></script>
+  <div class="result" id="result" style="display:none;"></div>
+
+  <div id="ranking" style="display:none;">
+    <h2>Ranking</h2>
+    <ol id="ranking-list"></ol>
+  </div>
+
+  <script src="js/quizdata.js"></script>
+  <script>
+    let quizData = {};
+    let currentCategory = null;
+    let currentIndex = 0;
+    let score = 0;
+    let currentQuiz = [];
+    let startTime;
+    let timerInterval;
+
+    // document.getElementById("json-loader").addEventListener("change", function () {
+    //   const file = this.files[0];
+    //   if (!file) return;
+    //   const reader = new FileReader();
+    //   reader.onload = function (e) {
+    //     try {
+    //       quizData = JSON.parse(e.target.result);
+    //       populateCategories();
+    //     } catch (err) {
+    //       alert("Erro ao carregar JSON: " + err.message);
+    //     }
+    //   };
+    //   reader.readAsText(file);
+    // });
+
+    quizData = quizJson;
+    populateCategories();
+
+    function populateCategories() {
+      const select = document.getElementById("category-select");
+      select.innerHTML = "";
+      for (let cat in quizData) {
+        const option = document.createElement("option");
+        option.value = cat;
+        option.textContent = cat;
+        select.appendChild(option);
+      }
+    }
+
+    function startQuiz() {
+    const category = document.getElementById("category-select").value;
+    if (!category) return alert("Selecione uma categoria.");
+    currentCategory = category;
+    currentQuiz = [...quizData[category]];
+    currentIndex = 0;
+    score = 0;
+
+    
+      startTime = Date.now();
+      clearInterval(timerInterval);
+      updateTimer();
+      timerInterval = setInterval(updateTimer, 1000);
+
+    document.getElementById("quiz-container").style.display = "block";
+    document.getElementById("result").style.display = "none";
+    showQuestion();
+  }
+
+  function showQuestion() {
+    const question = currentQuiz[currentIndex];
+    document.getElementById("question-text").innerText = question.question;
+    const image = document.getElementById("question-image");
+    if (question.image) {
+      image.src = question.image;
+      image.style.display = "block";
+    } else {
+      image.style.display = "none";
+    }
+
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = ""; // Limpa opções anteriores
+
+    question.options.forEach((option, index) => {
+      const btn = document.createElement("button");
+      btn.innerText = option;
+      btn.className = "option-btn";
+      btn.onclick = () => handleAnswer(index, question.correct);
+      optionsDiv.appendChild(btn);
+
+    });
+
+    document.getElementById("progress").textContent = `Pergunta ${currentIndex + 1} de ${currentQuiz.length}`;
+  }
+function handleAnswer(selectedIndex, correctIndex) {
+    const buttons = document.querySelectorAll(".option-btn");
+
+    // Impede múltiplos cliques
+    buttons.forEach(btn => btn.disabled = true);
+
+    if (selectedIndex === correctIndex) {
+      buttons[selectedIndex].style.backgroundColor = "green";
+      score++;
+    } else {
+      buttons[selectedIndex].style.backgroundColor = "red";
+      buttons[correctIndex].style.backgroundColor = "green";
+    }
+  }
+
+  function nextQuestion() {
+    if (++currentIndex < currentQuiz.length) {
+      showQuestion();
+    } else {
+      clearInterval(timerInterval);
+      showResult();
+    }
+  }
+
+ 
+
+  function showResult() {
+    const resultDiv = document.getElementById("result");
+    const timeTaken = Math.floor((Date.now() - startTime) / 1000);
+    resultDiv.innerText = `Você acertou ${score} de ${currentQuiz.length} perguntas, em ${timeTaken}s.`;
+    resultDiv.style.display = "block";
+    document.getElementById("quiz-container").style.display = "none";
+  }
+
+    function updateTimer() {
+      const now = Date.now();
+      const elapsed = Math.floor((now - startTime) / 1000);
+      document.getElementById("timer").textContent = `Tempo: ${elapsed}s`;
+    }
+
+    function updateRanking(score, category, time) {
+      const key = `ranking_${category}`;
+      let ranking = JSON.parse(localStorage.getItem(key)) || [];
+      const name = prompt("Digite seu nome para o ranking:") || "Anônimo";
+      const date = new Date().toLocaleString();
+      ranking.push({ name, score, time, date });
+      ranking.sort((a, b) => b.score - a.score || a.time - b.time);
+      ranking = ranking.slice(0, 10);
+      localStorage.setItem(key, JSON.stringify(ranking));
+
+      const list = document.getElementById("ranking-list");
+      list.innerHTML = "";
+      ranking.forEach((entry, i) => {
+        const li = document.createElement("li");
+        li.textContent = `${entry.name}: ${entry.score} pts - ${entry.time}s - ${entry.date}`;
+        list.appendChild(li);
+      });
+
+      document.getElementById("ranking").style.display = "block";
+    }
+  </script>
 </body>
 </html>
