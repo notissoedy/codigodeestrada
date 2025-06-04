@@ -7,33 +7,22 @@ let subtitulos = [];
 dados = {
   "categorias": [
     {
-      "nome": "Codigo de estrada",
-      "url":"home.html",
+      "nome": "Testes e Soluções",
+      "url":"userQuiz.html",
       "imagem": "imagens/conteudo.png"
     },
     {
-      "nome": "Transgrecoes e Multas",
-      "url":"userTransgrecoes.html",
+      "nome": "Exames",
+      "url":"userQuizExam.html",
       "imagem": "imagens/userTransgrecoes.jpeg"
     }
     ,
     {
-      "nome": "Sinalizacao",
-      "url":"userSimbols.html",
+      "nome": "Exames Aleatórios",
+      "url":"userQuizExamRandom.html",
       "imagem": "imagens/userSimbols.png"
     }
-    ,
-    {
-      "nome": "Quiz & Exames",
-      "url":"indexQuiz.html",
-      "imagem": "imagens/userQuiz.png"
-    }
-    ,
-    {
-      "nome": " Artigos Favoritos",
-      "url":"favoritos.html",
-      "imagem": "imagens/favoritos.png"
-    }
+    
   ]
 }
 

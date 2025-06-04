@@ -72,9 +72,16 @@
       if (file) {
         const reader = new FileReader();
         reader.onload = () => {
-          document.getElementById("preview").src = reader.result;
+
+        
+
+          const imgUrl =`imagens/questions/REGRA_E_NORMAS/${file.name}`;
+
+          console.log(imgUrl);
+
+          document.getElementById("preview").src = imgUrl;
           document.getElementById("preview").style.display = "block";
-          document.getElementById("preview").dataset.image = reader.result;
+          document.getElementById("preview").dataset.image = imgUrl;
         };
         reader.readAsDataURL(file);
       }
