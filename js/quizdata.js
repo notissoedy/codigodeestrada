@@ -1,37 +1,215 @@
 const quizJson = {
-    "sinais": [
-      {
-        "question": "ola",
-        "image": null,
-        "options": [
-          "wwww",
-          "ggg",
-          "sss",
-          "ttt"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "outra pergunta",
-        "image": null,
-        "options": [
-          "edson",
-          "hjr",
-          "24",
-          "hffff"
-        ],
-        "correct": 2
-      },
-      {
-        "question": "ola",
-        "image": "data:image/png;base64,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",
-        "options": [
-          "wwww",
-          "www",
-          "www",
-          "ggg"
-        ],
-        "correct": 2
-      }
-    ]
-  };
+  "sinais": [],
+  "proibicao": [],
+  "Teste 1": [
+    {
+      "question": "O sinal indica:",
+      "image": "imagens/questions/REGRA_E_NORMAS/16.png",
+      "options": [
+        "Existência de controle de tráfego adiante.",
+        "Controle policial por pirilampos.",
+        "Congestionamento do trafego.",
+        "nenhum!"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Os automoveis classificam-se em:",
+      "image": "imagens/questions/REGRA_E_NORMAS/208-400x300.png",
+      "options": [
+        "Ligeiros e Pessados.",
+        "Ligeiros, Pessados e Motocicloss.",
+        "Motocicclos, ciclomotores, Triciclos ,Quadricciclos, ligeiros e Psados.",
+        "Ligeiros, Pessados e Mistos!1"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "É aconselhável viajar à noite para evitar a fadiga?",
+      "image": "imagens/questions/REGRA_E_NORMAS/visib.png",
+      "options": [
+        "Não porque  o sono aparece mas facilmene.",
+        "Sim, se  a viagem é longa.",
+        "Sim, porque há menos tráfego.",
+        "Sim, viajar durante a noite é sempre mais seguro."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que indica o sinal de informação?",
+      "image": "imagens/questions/REGRA_E_NORMAS/210-400x300.png",
+      "options": [
+        "Área reservada para automoveis ligeiros.",
+        "Área reservada para táxis.",
+        "Parque de estacionamento para automóveis ligeiros de passageiros .",
+        "nenhum!"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Que veiculo deve retroceder para dar passagem ao outro, numa passagem estreita sem sinalização onde não seja possível efectuar o cruzamento?",
+      "image": "imagens/questions/REGRA_E_NORMAS/211-400x300.png",
+      "options": [
+        "O veículo mais pesado.",
+        "O veículo com maior  largura.",
+        "O veiculo que esta mais  proximo do local emm que o cruzamento seja possível.",
+        "O veiculo que desce se for numa via de inclinação acentuada."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Deve utilizar-se as luzes de perigo...",
+      "image": "imagens/questions/REGRA_E_NORMAS/212-400x300.png",
+      "options": [
+        "ao estacionar em segunda fila.",
+        "para avisar os outros utentes que o veiculo vai fazer marcha atrás.",
+        "em caso de imobilização por acidente ou avaria, se origina perigo para os demais utentes da via.",
+        "apenas quando o veiculo esteja a ser rebocado."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O que indica a marca rodoviária branca?",
+      "image": "imagens/questions/REGRA_E_NORMAS/213-400x300.png",
+      "options": [
+        "Indica existência de bandas sonoras.",
+        "Indica a redução de filas de transito.",
+        "Indica existência de lombas.",
+        "nenhum."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Atirar do veículo ou abandonar na via objectos ou substâncias, constituí contravençao:",
+      "image": "imagens/questions/REGRA_E_NORMAS/lixo.png",
+      "options": [
+        "Leve.",
+        "Grave.",
+        "Média.",
+        "nenhum!"
+      ],
+      "correct": 2
+    },
+    {
+      "question": " Entende-se par visibilidade reduzida ou insuﬁciente, quando o condutor não possa avistar a faixa de rodagem em toda a sua largura numa extensão de:",
+      "image": "imagens/questions/REGRA_E_NORMAS/visib.png",
+      "options": [
+        "Pelo menos, 50 metros.",
+        "Pelo menos, 200 metros.",
+        "Pelo menos, 100 metros.",
+        "Pelo menos, 25 metros."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que indica  o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/Sentido proibido.png",
+      "options": [
+        "Sentido proibido.",
+        "Trânsito  proibido.",
+        "Trânsito  proibido a automóveis ligeiros de passageiros.",
+        "nenhum!"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Uma das consequências de aumentar a velocidade, é  que...",
+      "image": "imagens/questions/REGRA_E_NORMAS/181-400x300.png",
+      "options": [
+        "mellhora  o tempo de  relação.",
+        "aumenta  a gravidade das lesões em caso de acidente.",
+        "reduz a distância de travagem.",
+        "reduz as distrações."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O trânsito  de veículos  ou animais é feito...",
+      "image": "imagens/questions/REGRA_E_NORMAS/257-400x300.png",
+      "options": [
+        "do lado  direito das faixas de rodagem e o  mais próximo possível das bermas ou passeios.",
+        "proximo  do  eixo da via.",
+        "pela esquerda das faixas de rodagem e o mais proximo possível das bermas ou  passeios. mas a uma distancia destes que permita evitar qualquer acideme.",
+        "null"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Numa auto-estrada, pode se inverter o sentido de marcha?",
+      "image": "imagens/questions/REGRA_E_NORMAS/autoestrada.png",
+      "options": [
+        "Sempre que possíve.",
+        "Nunca.",
+        "Sim se a manobra for  feita lentamente.",
+        "null"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/substancia perigoza.png",
+      "options": [
+        "Paragem proibida a a veículos que transportam substâncias perigosas.",
+        "Paragem obrigatoria a a veículos que transportam substâncias perigosas.",
+        "Área reservada para veiculos que trasportam subtancias  perigosas.",
+        "null"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Que comunica o condutor aos outros utentes  da  viia?",
+      "image": "imagens/questions/REGRA_E_NORMAS/reduzir velocidade.png",
+      "options": [
+        "Que vai voltar para o lado esquerdo do volante.",
+        "Que vai voltar para o lado direito do volante.",
+        "Que vai reduzir a velocidade.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "o que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/ponte movel.png",
+      "options": [
+        "A presença de cancela motorizada ao centro.",
+        "A presença de ponte movel.",
+        "a presenca de entrocamento obliquo a  esquerda.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indca o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/Pre-advertencia saida.png",
+      "options": [
+        "Pré-advertência da direcção de saída.",
+        "Advertência da direcção de saída.",
+        "Direcção de saída.",
+        "null."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Considera-se morto por acidente de viação:",
+      "image": "imagens/questions/REGRA_E_NORMAS/morte.png",
+      "options": [
+        "Aquele que ocorre até 30 dias após o registo do sinistro.",
+        "Só àquele que ocorre no local do sinistro.",
+        "Só àquele que ocorre à caminho da unidade sanitária.",
+        "Aquele que ocorre 30 dias depós do registo do sinistro."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Os peões, para atravessar a faixa de rodagem...",
+      "image": "imagens/questions/REGRA_E_NORMAS/221-400x300.png",
+      "options": [
+        "podem fazê-lo sem utilizar as passagens para peões, se não existe nenhuma a uma distância inferior a  10 m.",
+        "estão sempre obrigados a utilizar a passagem  desnivelada para peões.",
+        "têm sempre prioridade de passagem.",
+        "devem certificar-se de que a distância  e velocidade  dos veículos, permite fazê-lo sem perio de acidente."
+      ],
+      "correct": 3
+    }
+  ]
+}
