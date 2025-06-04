@@ -98,6 +98,8 @@ function renderSinais() {
 
   container.appendChild(grid);
   renderPaginacao(totalPaginas);
+
+  configurarSwipeGestures();
 }
 
 function renderPaginacao(totalPaginas) {
@@ -106,7 +108,24 @@ function renderPaginacao(totalPaginas) {
   const paginacao = document.createElement("div");
   paginacao.className = "pagination";
 
-  for (let i = 1; i <= totalPaginas; i++) {
+  const criarBotao = (texto, onClick, desabilitado = false) => {
+    const btn = document.createElement("button");
+    btn.textContent = texto;
+    btn.className = "nav-btn";
+    btn.disabled = desabilitado;
+    btn.onclick = onClick;
+    paginacao.appendChild(btn);
+  };
+
+  // Botão Anterior
+  criarBotao("«", () => {
+    if (paginaAtual > 1) {
+      paginaAtual--;
+      renderSinais();
+    }
+  }, paginaAtual === 1);
+
+  const mostrarPagina = (i) => {
     const btn = document.createElement("button");
     btn.textContent = i;
     btn.className = "page-btn";
@@ -116,12 +135,39 @@ function renderPaginacao(totalPaginas) {
       paginaAtual = i;
       renderSinais();
     };
-
     paginacao.appendChild(btn);
+  };
+
+  const limiteVizinho = 2;
+
+  for (let i = 1; i <= totalPaginas; i++) {
+    if (
+      i === 1 || i === totalPaginas ||
+      (i >= paginaAtual - limiteVizinho && i <= paginaAtual + limiteVizinho)
+    ) {
+      mostrarPagina(i);
+    } else if (
+      i === paginaAtual - limiteVizinho - 1 ||
+      i === paginaAtual + limiteVizinho + 1
+    ) {
+      const dots = document.createElement("span");
+      dots.textContent = "...";
+      paginacao.appendChild(dots);
+    }
   }
+
+  // Botão Próxima
+  criarBotao("»", () => {
+    if (paginaAtual < totalPaginas) {
+      paginaAtual++;
+      renderSinais();
+    }
+  }, paginaAtual === totalPaginas);
 
   container.appendChild(paginacao);
 }
+
+
 
 function mostrarModal(src, descricao) {
   const modal = document.getElementById("modal");
@@ -144,3 +190,37 @@ document.addEventListener("DOMContentLoaded", () => {
   criarBotaoFiltros();
   renderSinais();
 });
+
+
+function configurarSwipeGestures() {
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const zonaSwipe = document.getElementById("sinais");
+
+  zonaSwipe.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  zonaSwipe.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipeGesture();
+  });
+
+  function handleSwipeGesture() {
+    const deltaX = touchEndX - touchStartX;
+    const minDist = 50; // mínimo para considerar swipe
+
+    if (Math.abs(deltaX) < minDist || window.innerWidth > 768) return;
+
+    if (deltaX > 0 && paginaAtual > 1) {
+      // Swipe para a direita (voltar)
+      paginaAtual--;
+      renderSinais();
+    } else if (deltaX < 0 && paginaAtual < totalPaginasGlobais) {
+      // Swipe para a esquerda (avançar)
+      paginaAtual++;
+      renderSinais();
+    }
+  }
+}
