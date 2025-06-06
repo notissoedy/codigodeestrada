@@ -1,6 +1,4 @@
 const quizJson = {
-  "sinais": [],
-  "proibicao": [],
   "Teste 1": [
     {
       "question": "O sinal indica:",
