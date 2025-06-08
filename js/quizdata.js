@@ -275,5 +275,271 @@ const quizJson = {
       ],
       "correct": 2
     }
+  ],
+  "Teste 2": [
+    {
+      "question": "Podem deixar de respeitar as regras e os sinais de trânsito os condutores de veículos prioritários?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-1.png",
+      "options": [
+        "Não.",
+        "Sim, quando a sua missão o exigir, mas devem respeitar as ordens dos aentes reuladores do trânsito.",
+        "Sim, incluido as ordens dos agentes reguladores do trânsito.",
+        "Sim, excepto a prioridade de passagem nas intersecções."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-2.png",
+      "options": [
+        "Pista obrigatória para veiculos de tracção manual.",
+        "Pista obrigatória para peões e velocipedes.",
+        "Pista obrigatória para peões.",
+        "Trasito proibido a velocipedes e peoes."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Que devem faser os condutores se o sinal luminoso desta interseccao esta avariado? ",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-3.png",
+      "options": [
+        "Ceder a passagem a todos os condutores que se apresentem pela via tranversal.",
+        "Ceder a passagem a todos os condutores que se apresentem pela esquerda.",
+        "Ceder a passaem aos condutores que se apresentem pela direita.",
+        "Continuar a marcha,já que tenho prioridade de passagem."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Qual é a principal causa de acidentes  rodoviários?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-4.png",
+      "options": [
+        " O Homem.",
+        "A Via.",
+        "O veiculo.",
+        "nenhum!"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Deixar de indicar com antecedência, mediante gesto regulamentar de braço ou luz indicadora de direcção do veículo, o inicio da marcha, a realização da manobra de parar o veiculo, a mudança de direção ou de faixa de circulação, constitui contravençao:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-5.png",
+      "options": [
+        "Media.",
+        "Grave.",
+        "Leve.",
+        "nenhum!"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Se estacionar o veiculo na faixa de rodagem desde anoitecer até ao amanhecer, deve utilizar alguma luz?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-6.png",
+      "options": [
+        "Sim, as de presenca(minimos), se a iluminação não permite reconhecer o veículo a 100 metros.",
+        "Não, mesmo que seja num local sem iluminação. ",
+        "Sim, as de estrada(máximos).",
+        "Sim, as de cruzamento (medio), se a iluminação não permite reconhecer o veiculo a 100 metros."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Ao aproximar-se desta passagem para peões, o codutor deve ...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-7.png",
+      "options": [
+        "reduzir a velocidade e parar para passar os peões que já tenham iniciado a travessia da faixa de rodagem.",
+        "faser sinais com a mão aos peões que esperam para iniciar a travessia.",
+        "aumentar a velocidade  para atravessa-la rapidamente.",
+        "Buzinar para que os peões não continuesm o atravessamento."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-8.png",
+      "options": [
+        "Trânsito proibido a automóveis ligeiros e motociclos.",
+        "Proibição de ultrapassagem.",
+        "Transito proibido a automóveis ligeiros de passageiros.",
+        "null"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-9.png",
+      "options": [
+        "Proibição de exceder  a velocidade de 120km/h de noite.",
+        "Proibição de exceder  a velocidade de 120km/h de de dia.",
+        "Proibição de exceder  a velocidade de 120km/h transportado substâncias perigosas.",
+        "null"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Onde é  o local mais Seguro para instalar no veículo um sistema de retenção para crianças?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-10.png",
+      "options": [
+        "No banco da frente, para que o condutor possa observar a criança.",
+        "Qualquer dos assentos traseiros laterais.",
+        "No assento central traseiro, já  que é menos afectado pelos impactos laterais.",
+        "Qualquer assento pois são igualmente seguros."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Entende-se por automovel ligeiro:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-11.png",
+      "options": [
+        "O automóvel cuja lotação não excede os 8 lugares.",
+        "O automóvel com PB até 3500kg e com lotação superior a 9 lugares, incluido o condutor.",
+        "Todos os automoveis até ao peso de 4500kg.",
+        "null"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O documento que titula a habilitação para conduzir automóveis, motociclos, triciclos e quadriciclos, designa-se por:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-12.png",
+      "options": [
+        "Carta de condução.",
+        "Licença de condução.",
+        "Licença especial  de condução.",
+        "Livrete de condução."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que indica o sinal de informação?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-13.png",
+      "options": [
+        "Inicio da faixa reservada para taxis do lado esquerdo.",
+        "Parque de estacionamento para táxis.",
+        "Area reservada para táxis.",
+        "null"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "A distância percorrida desde que o condutor identifica um perigo até que o veículo pare completamente...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-14.png",
+      "options": [
+        "depende apenas do estado dos travões.",
+        "é maior quanto maior for a velocidade.",
+        "depende apenas do estado do condutor.",
+        "Só varia se o veículo ou a via estão em mau estado."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Nas auto-estradas é proibido circular a velocidade inferior a ....",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-15.png",
+      "options": [
+        "60 km/h",
+        "50 km/h",
+        "40 km/h",
+        "70 km/h"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "É obrigatório sinalizar o veículo quando esteja a ser rebocado?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-16.png",
+      "options": [
+        "Sim, com as luzes de presença em todos os casos.",
+        "Sim, com as luzes de perigo ou, não sendo possível, com as luzes de presença.",
+        "Não é obrigatório, mas é aconselhável utilizar as luzes de perigo.",
+        "Sim, com as luzes de perio e com as de marcha atrás."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O sinal, pertence ao grupo de sinais de:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-17.png",
+      "options": [
+        "Direção  para auto-estradas.",
+        "Pré-sinalização e de direcção.",
+        "Direção.",
+        "null"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Por que via de trânsito deve circular nesta situação?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-19.png",
+      "options": [
+        "Pela via mais coveniente ao seu destino.",
+        "pela via da direita.",
+        "Pela via mais a esquerda podendo utilizar outra para ultrapassar ou mudar de direcção.",
+        "É indiferente, uma vez que a via não está congestionada."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-20.png",
+      "options": [
+        "Cruzamento.",
+        "Cruzamento com estrada sem prioridade.",
+        "Cruzamento com estrada com prioridade.",
+        "null"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Que comunica o condutor aos outros utentes da via?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-21.png",
+      "options": [
+        "Que afroxe.",
+        "Que pode faser a ultrapassagem.",
+        "Que pare.",
+        "null"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-22.png",
+      "options": [
+        "pavimento escoregadio.",
+        "Visibilidade reduzida.",
+        "Inicio de estrada alcatroada.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Depois do sinal vertical, o condutor:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-23.png",
+      "options": [
+        "Pode parar o veículo.",
+        "Pode estacionar o veículo.",
+        "Pode parar e estacionar o veículo.",
+        "null"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "A pressão  dos pneus deve ser verificada:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-24.png",
+      "options": [
+        "Apenas quando o veículo é  sujeito à Inspeção Periódica Obrigatória.",
+        "Apenas quando o condutor pretende efectuar uma viagem.",
+        "Regularmente.",
+        "Uma vez ao ano."
+      ],
+      "correct": 2
+    },
+    {
+      "question": " As doenças e os medicamentos, podem ser a causa de um acidente rodoviario?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste2-25.png",
+      "options": [
+        "Sim, porque podem afetar a capacidade para conduzir com segurança.",
+        "Não, porque os acidentes dependem de outros factores.",
+        "Sim, excepto as gripes, constipações ou alerias.",
+        "Sim, excepto quando um medico tenha feito a receita."
+      ],
+      "correct": 0
+    }
   ]
 }
