@@ -2,7 +2,7 @@ const quizJson = {
   "Teste 1": [
     {
       "question": "O sinal indica:",
-      "image": "imagens/questions/REGRA_E_NORMAS/16.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-1.png",
       "options": [
         "Existência de controle de tráfego adiante.",
         "Controle policial por pirilampos.",
@@ -13,7 +13,7 @@ const quizJson = {
     },
     {
       "question": "Os automoveis classificam-se em:",
-      "image": "imagens/questions/REGRA_E_NORMAS/208-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-2.png",
       "options": [
         "Ligeiros e Pessados.",
         "Ligeiros, Pessados e Motocicloss.",
@@ -24,7 +24,7 @@ const quizJson = {
     },
     {
       "question": "É aconselhável viajar à noite para evitar a fadiga?",
-      "image": "imagens/questions/REGRA_E_NORMAS/visib.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-3.png",
       "options": [
         "Não porque  o sono aparece mas facilmene.",
         "Sim, se  a viagem é longa.",
@@ -35,7 +35,7 @@ const quizJson = {
     },
     {
       "question": "O que indica o sinal de informação?",
-      "image": "imagens/questions/REGRA_E_NORMAS/210-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-4.png",
       "options": [
         "Área reservada para automoveis ligeiros.",
         "Área reservada para táxis.",
@@ -46,7 +46,7 @@ const quizJson = {
     },
     {
       "question": "Que veiculo deve retroceder para dar passagem ao outro, numa passagem estreita sem sinalização onde não seja possível efectuar o cruzamento?",
-      "image": "imagens/questions/REGRA_E_NORMAS/211-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-5.png",
       "options": [
         "O veículo mais pesado.",
         "O veículo com maior  largura.",
@@ -57,7 +57,7 @@ const quizJson = {
     },
     {
       "question": "Deve utilizar-se as luzes de perigo...",
-      "image": "imagens/questions/REGRA_E_NORMAS/212-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-6.png",
       "options": [
         "ao estacionar em segunda fila.",
         "para avisar os outros utentes que o veiculo vai fazer marcha atrás.",
@@ -68,7 +68,7 @@ const quizJson = {
     },
     {
       "question": "O que indica a marca rodoviária branca?",
-      "image": "imagens/questions/REGRA_E_NORMAS/213-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-7.png",
       "options": [
         "Indica existência de bandas sonoras.",
         "Indica a redução de filas de transito.",
@@ -79,7 +79,7 @@ const quizJson = {
     },
     {
       "question": "Atirar do veículo ou abandonar na via objectos ou substâncias, constituí contravençao:",
-      "image": "imagens/questions/REGRA_E_NORMAS/lixo.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-8.png",
       "options": [
         "Leve.",
         "Grave.",
@@ -90,7 +90,7 @@ const quizJson = {
     },
     {
       "question": " Entende-se par visibilidade reduzida ou insuﬁciente, quando o condutor não possa avistar a faixa de rodagem em toda a sua largura numa extensão de:",
-      "image": "imagens/questions/REGRA_E_NORMAS/visib.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-9.png",
       "options": [
         "Pelo menos, 50 metros.",
         "Pelo menos, 200 metros.",
@@ -101,7 +101,7 @@ const quizJson = {
     },
     {
       "question": "O que indica  o sinal?",
-      "image": "imagens/questions/REGRA_E_NORMAS/Sentido proibido.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-10.png",
       "options": [
         "Sentido proibido.",
         "Trânsito  proibido.",
@@ -112,7 +112,7 @@ const quizJson = {
     },
     {
       "question": "Uma das consequências de aumentar a velocidade, é  que...",
-      "image": "imagens/questions/REGRA_E_NORMAS/181-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-11.png",
       "options": [
         "mellhora  o tempo de  relação.",
         "aumenta  a gravidade das lesões em caso de acidente.",
@@ -123,7 +123,7 @@ const quizJson = {
     },
     {
       "question": "O trânsito  de veículos  ou animais é feito...",
-      "image": "imagens/questions/REGRA_E_NORMAS/257-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-12.png",
       "options": [
         "do lado  direito das faixas de rodagem e o  mais próximo possível das bermas ou passeios.",
         "proximo  do  eixo da via.",
@@ -134,7 +134,7 @@ const quizJson = {
     },
     {
       "question": "Numa auto-estrada, pode se inverter o sentido de marcha?",
-      "image": "imagens/questions/REGRA_E_NORMAS/autoestrada.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-13.png",
       "options": [
         "Sempre que possíve.",
         "Nunca.",
@@ -145,7 +145,7 @@ const quizJson = {
     },
     {
       "question": "O que indica o sinal?",
-      "image": "imagens/questions/REGRA_E_NORMAS/substancia perigoza.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-14.png",
       "options": [
         "Paragem proibida a a veículos que transportam substâncias perigosas.",
         "Paragem obrigatoria a a veículos que transportam substâncias perigosas.",
@@ -156,7 +156,7 @@ const quizJson = {
     },
     {
       "question": "Que comunica o condutor aos outros utentes  da  viia?",
-      "image": "imagens/questions/REGRA_E_NORMAS/reduzir velocidade.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-15.png",
       "options": [
         "Que vai voltar para o lado esquerdo do volante.",
         "Que vai voltar para o lado direito do volante.",
@@ -167,7 +167,7 @@ const quizJson = {
     },
     {
       "question": "o que indica o sinal?",
-      "image": "imagens/questions/REGRA_E_NORMAS/ponte movel.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-16.png",
       "options": [
         "A presença de cancela motorizada ao centro.",
         "A presença de ponte movel.",
@@ -178,7 +178,7 @@ const quizJson = {
     },
     {
       "question": "O que indca o sinal?",
-      "image": "imagens/questions/REGRA_E_NORMAS/Pre-advertencia saida.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-17.png",
       "options": [
         "Pré-advertência da direcção de saída.",
         "Advertência da direcção de saída.",
@@ -189,7 +189,7 @@ const quizJson = {
     },
     {
       "question": "Considera-se morto por acidente de viação:",
-      "image": "imagens/questions/REGRA_E_NORMAS/morte.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-18.png",
       "options": [
         "Aquele que ocorre até 30 dias após o registo do sinistro.",
         "Só àquele que ocorre no local do sinistro.",
@@ -200,7 +200,7 @@ const quizJson = {
     },
     {
       "question": "Os peões, para atravessar a faixa de rodagem...",
-      "image": "imagens/questions/REGRA_E_NORMAS/221-400x300.png",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-19.png",
       "options": [
         "podem fazê-lo sem utilizar as passagens para peões, se não existe nenhuma a uma distância inferior a  10 m.",
         "estão sempre obrigados a utilizar a passagem  desnivelada para peões.",
@@ -208,6 +208,72 @@ const quizJson = {
         "devem certificar-se de que a distância  e velocidade  dos veículos, permite fazê-lo sem perio de acidente."
       ],
       "correct": 3
+    },
+    {
+      "question": "Nos veiculos de mercadorias a cara deve ser disposta de modo à :",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-20.png",
+      "options": [
+        "O principal peso fique sobre o eixo da retauarda.",
+        "Fique lifre o maior espaço possível à retauarda da caixa de carga.",
+        "Seja assegurado o equilíbrio do veículo, parado ou em movimento.",
+        "nenuma"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O que indica o sinal ?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-21.png",
+      "options": [
+        "Transito proibido a peões, animais  e veiculos automóveis.",
+        "Transito proibido a peões, animais  e veiculos não  automóveis.",
+        "Transito proiido animais  e veiculos não  automóveis.",
+        "nenhum "
+      ],
+      "correct": 1
+    },
+    {
+      "question": "É proibido ultrapassar:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-22.png",
+      "options": [
+        "Em todas as curvas.",
+        "Depois dos cruzamentos.",
+        "Nas estradas que só tenham uma via de trânsito para cada sentido.",
+        "Imediatamente antes e nas passagens para peões."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Os automoveis pesados de passageiros, fora das localidades, não devem exceder a velocidade instantania de : ",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-23.png",
+      "options": [
+        "80km/h.",
+        "120km/h.",
+        "100km/h.",
+        "nenuma"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Todos os condutores de veiculos ou animais são obrigados a ...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-24.png",
+      "options": [
+        "abandonar os veiculos nos locais de estacionamento sem motivo justificado.",
+        "reduzir ou suspender intencionalmente a circulação, formamdo filas de transito desnecessárias.",
+        "obedecer ao sinal de paragem feito pelas autoridades com competencia para fiscalização do transito.",
+        "nenhum!"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "o que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste1-25.png",
+      "options": [
+        "Sentido obrigatorio para frente.",
+        "Via rápida.",
+        "Existência de portagem na via em que segue.",
+        "null"
+      ],
+      "correct": 2
     }
   ]
 }
