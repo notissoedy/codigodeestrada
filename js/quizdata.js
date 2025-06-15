@@ -541,5 +541,537 @@ const quizJson = {
       ],
       "correct": 0
     }
+  ],
+  "Teste 3": [
+    {
+      "question": "As luzes de travagem dos automóveis tem a cor:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-1.png",
+      "options": [
+        "Vermela.",
+        "Branca ou amarela.",
+        "Amarela ou alaranjada.",
+        "null."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "É a via pública um espaço destinado ao transito de peões?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-2.png",
+      "options": [
+        "Não, Na via publica só podem transitar veiculos.",
+        "Sim, de peões e de veiculos.",
+        "sim, mas só de dia.",
+        "Sim, mas só dentro das localidades."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-3.png",
+      "options": [
+        "Paragem e estacionamento proibido.",
+        "Estacionamento proibido.",
+        "Estacionamnto condicionado.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A medida que aumenta a velocidade...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-4.png",
+      "options": [
+        " aumenta o campo de visão do condutor.",
+        "a fadiga demora mais a aparecer.",
+        "reduz-se o campo de visão do condutor e aumenta a fadiga.",
+        "melhrora a capacidade de controlar o veículo nas situações de emergência."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Entende-se por cruzamnto de veiculos:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-5.png",
+      "options": [
+        "Quando na mesma via, se encotram dois veiculos transitando no mesmo setido.",
+        "Quando dois veiculos, circulam na mesma fila, o que se encontra atras passa para frente do outro.",
+        "Quandos os condutores de dois veiculos que transitam na mesma via e em sentidos opostos, passam um pelo outro em simultaneo.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-6.png",
+      "options": [
+        "Terreno falso à direita.",
+        "Cruzamento facilmente congestionavel.",
+        "Congestionamento de tráfego.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O que indica o sinal ",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-7.png",
+      "options": [
+        "Inicio de localidades.",
+        "Fim de localidades.",
+        "Advertencia suplementar-de direcção ou direcção de acesso.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Com o fim de ter a uma boa capacidade de manobra e garantir o bom funcionamento dos sistemas de segurança do veículo, o condutor deve regular o assento.",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-8.png",
+      "options": [
+        "por forma a ficar muito proximo do volante, com as pernas e braços encolidos.",
+        "por forma a que as pernas e braços fiquem ligeiramente fletidos.",
+        "por forma a ficar longe do volante,com as pernas  e braços esticados.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Onde é proibido  realizar uma ultrapassagem?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-9.png",
+      "options": [
+        "Nos cruzamentos e entrocamentos em que não tenha prioridade de passagem.",
+        "Nas rotundas.",
+        "Em todos os cruzamentos e entrocamentos.",
+        "Nas auto-estradas."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Transitar com o veiculo em velocidade inferior à metade da velocidade máxima estabelecida pera a via, retardando ou obtruindo o trânsito, constitui contravençao:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-10.png",
+      "options": [
+        "Media.",
+        "Leve.",
+        "Grave.",
+        "null."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Pode conduzir um automevel ligeiro com reboque com a carte de condução da cateoria B?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-11.png",
+      "options": [
+        "Sim, desde que o peso bruto do reboque não exceda 750kg.",
+        "Não, é  necessário a da cateoria C1E.",
+        "Sim, desde que o peso bruto do reboque nao exceda 3500kg.",
+        "Não, é necessario a da cateoria ."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que indica o sinal triangular?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-12.png",
+      "options": [
+        "Local de passagem de nivel com cancela.",
+        "Passagem de nivel.",
+        "Local de passagem de nivel com cancela, com duas ou mais vias.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-13.png",
+      "options": [
+        "Descida de inclinação acentuada.",
+        "Descida de inclinação acentuada ao lono da distancia indicada.",
+        "Entrocamento obliquo à  direita.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": " O àlcool influencia de forma negativa o desempeno da tarefa de condução?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-14.png",
+      "options": [
+        "sim, mas apenas quando a taxa de álcool no sange é muito elevada.",
+        "Não, porque o àlcool é um estimulante para a condução.",
+        "Sim, influencia de forma negativa na tarefa de condução.",
+        "Não, se é tomado duramnte o almoço."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Detro das localidades, em vias com mais de uma via de trânsito no mesmo sentido, o condutor deve utilizar...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-15.png",
+      "options": [
+        "a via de trânsito mais à esquerda, podendo utilizar outra só para ultrapassar  ou mudar de direção.",
+        "a via de trânsito da esquerda, podendo mudar para a da direita sempre que lhe apeteça.",
+        "a via de trânsito mais coveniente ao seu destino.",
+        "a via de transito mais à direita."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Durante a noite, quando deve o condutor utilizar as luzes de cruzamento?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-16.png",
+      "options": [
+        "Só no cruzamento com pessoas ou animais.",
+        "Durante a paragem ou estacionamento do veiculo.",
+        "No cruzamento com outros veiculos ou quando esteja a menos de 100 metros do veículo que segue à sua frente.",
+        "Fora das localidades, nos locais em que a iluminação  permita uma visibilidade a 25 metros."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "o que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-17.png",
+      "options": [
+        "pista obrigatoria para veiculos de tracção animal.",
+        "pista obrigatória para riquexo.",
+        "pista obriatoria para veiculos de tracção animal.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que deve faser quando um velocipede segue no mesmo sentdo de trânsito?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-18.png",
+      "options": [
+        " Utilizar  os sinais sonoros.",
+        "Ter em atenção a instabilidade desse veículo.",
+        "Ultrapassá-lo a grande velocidade.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Se tem a carta de condução de categoria B há menos de um ano e conduz um automóvel ligeiro de passageiros, não pode exceder a velocidade de...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-19.png",
+      "options": [
+        "90 km/h.",
+        "120 km/h.",
+        "100 km/h.",
+        "80 km/h."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Marcha atrás, é uma manobra que deve ser efectuada.",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-20.png",
+      "options": [
+        "o mais direita possível, em local de boa visibilidade.",
+        "lentamente e o mais possivel a esquerda.",
+        "o mais rapidamente possivel, em local onde não prejudique o trânsito.",
+        "rapidamente e no menor trajecto possivel."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-21.png",
+      "options": [
+        "Transito proibido a automoveis ligeiros de passageiros.",
+        "Trânsito proibido a Táxis.",
+        "Trânsito proibido a veiculos automoveis e motociclos com carro.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Se o condutor sofre de uma doença, o que deve faser para reduzir o risco de ter um acidente?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-22.png",
+      "options": [
+        " Interromper a medicação que estiver a tomar, se tem que conduzir.",
+        "Conhecer os efeitos secundarios dos medicamentos.",
+        "Deixar de conduzir em todos os casos.",
+        "Ignorar os sintomas para evitar distracções."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O condutor, ao colocar a carga num veículo, entre os outros cuidados deve...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-23.png",
+      "options": [
+        "evitar que a carga possa vir a cair sobre a via.",
+        "colocá-la sómente na mala do porta bagagem.",
+        "colocar a carga mais pesada na parte reservada aos passageiros.",
+        "colocar a carga mais pesada na parte superior do veículo."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "As ordens dos agentes reguladores do trânsito, prevalecem sobre os sinais luminosos:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-24.png",
+      "options": [
+        "De qualquer cor.",
+        "Verdes. ",
+        "Amarelos.",
+        "Vermelho."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste3-25.png",
+      "options": [
+        " Parque de estacionamento para autocarros e autocarros médios.",
+        "Área reservada para autocarros e autocarros médios.",
+        "Faixa reservada para qualquer tipo de autocarro do lado esquerdo.",
+        "null."
+      ],
+      "correct": 1
+    }
+  ],
+  "Teste 4": [
+    {
+      "question": "A luz indicadora de mudança de direcção à direita accionada ao iniciar uma ultrapassaem, só deve ser desligada...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-1.png",
+      "options": [
+        " Uma vez finalizada a ultrapasssaem.",
+        "antes de mudar de via de trânsito.",
+        "Quando termina de mudar de via de trânsito.",
+        "Só  depois de percorrer uma distancia de 500 metros."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "O agente  regulador de trânsito da fotografia, manda:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-2.png",
+      "options": [
+        "Parar o tráfego que venha da frente e da  retaguarda.",
+        "Parar o tráfego que venha da retaguarda.",
+        "Parar o tráfego que venha da frente.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "A que grupo pertence o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-3.png",
+      "options": [
+        "Sinais de interesse turístico.",
+        "Sinais de direcção para áreas turisticas.",
+        "Sinais de direção nas estradas, ruas e vias rápidas.",
+        "null."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Conduzir sob influência de alcool, sob efeitos de substâncias legalmente consideradas como estupafacientes ou psicotropicas, constituí contravenções:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-5.png",
+      "options": [
+        "Leve.",
+        "Grave.",
+        "Media.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Os condutores devem utilizar as luzes de presença (mínimos)...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-6.png",
+      "options": [
+        "apenas durante a paragem ou estacionamento dentro das localidades.",
+        "ao circular de dia com boa visibilidade.",
+        "em condições  de visibilidade insuficiente, enquanto aguardam a abertura de passagem de nível.",
+        "durante a noite, no cruzamentos com outros veículos, pessoas ou animais."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Na tarefa de condução, em que momento é a audição um sentido de muito importante?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-8.png",
+      "options": [
+        "Na decisão.",
+        "Na recolha de informação.",
+        "No tratamento da informação.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "A finalidade dos sistemas de segurança activa e e passiva dos veículos, é:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-9.png",
+      "options": [
+        "Poder circular em alta velocidade sem perigo.",
+        "Evitar todos os acidentes.",
+        "Reduzir os acidentes de trânsito e as suas consequências.",
+        "poder circular sem prestar atenção à estrada."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Os veiculos consideram-se prioritários?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-10.png",
+      "options": [
+        "Os que transitam em missão urgente de socorro e comitivas governamentais, assinalando adequadamente a sua marcha.",
+        "As ambulâncias que transportam feridos.",
+        "As comitivas governamentais.",
+        "null."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "O que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-11.png",
+      "options": [
+        "Passagem de nível.",
+        "A presença  de máquinas na via.",
+        "Passagem de um veículo automóvel de cada vez.",
+        "null."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Pode transpor um condutor a linha existente no eixo da via?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-12.png",
+      "options": [
+        "Sim, para mudar de direcção.",
+        "Sim, para ultrapassar.",
+        "Não, Numca pode transpor a linha existente no deixo da via.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Ao transitar, é necessário manter entre os veiculos uma distância de segurança?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-13.png",
+      "options": [
+        "Sim, mas apenas em relação aos veiculos que transitam à  mina frente.",
+        "Sim, Uniformimente uma distância lateral.",
+        "Sim em relação ao transito que me rodeia.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": " Em curvas de visibilidade reduzida, pode utrapassar?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-14.png",
+      "options": [
+        "Não, em nenhum caso.",
+        "Sim, ainda que se faça pela parte da faixa de rodagem reservada ao sentido contrario.",
+        "Não, a menos que sejam possiveis duas ou mais filas de trânsito no mesmo sentido e não se faca pela parte reservada ao sentido contrário.",
+        "Sim, utilizando os dispositivos luminosos e sonoros."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Que veículos podem conduzir as pessoas que só possuam a carta de condução da cateoria B?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-15.png",
+      "options": [
+        "Automóveis ligeiros.",
+        "Todos.",
+        "Automóveis pesados de mercadorias ou de passaeiros.",
+        "Motociclos com ou sem carro."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "A fadia, é um estado que pode influenciar a recolha de informação durante a condução?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-16.png",
+      "options": [
+        "Não",
+        "Sim, tal como influenciar toda a tarefa da condução.",
+        "Sim, mas apenas influencia a recolha de informação em condução urbana.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Entende-se por cidadania:",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-17.png",
+      "options": [
+        "A nacionalidade de um cidadão que o identifica como tal.",
+        "O princípio que permite avançar em primeiro lugar num cruzamento não sinalizado.",
+        "O conjunto de valores sociais que determinam o conjunto de deveres e direitos de um cidadão.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Nas passagens de nível, os condutores estao obriados a..",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-18.png",
+      "options": [
+        "passar quando as cancelas ou barreiras estejam em movimento.",
+        "aumentar a velocidade para atravesar rapidamente.",
+        "certificar-se que a intensidade do tráfego não obria a imobilizar o veiculo sobre ela.",
+        "engrenar uma velocidade baixa durante o atravessamento."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Sempre que o veículo esteja parado ou estacionado do lado esquerdo da faixa de rodagem...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-19.png",
+      "options": [
+        "os passageiros devem entrar e sair pelo lado esquerdo do veiculo.",
+        "os passageiros não podem sair do veículo.",
+        "o condutor deve entrar e sair pelo lado esquerdo do veículo.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "O que indica o sinal vertical?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-20.png",
+      "options": [
+        "Fim da proibição de ultrapassagem para automoveis pesados.",
+        "Fim da proibição da ultrapassaem par motociclos simples.",
+        "Fim da proibição de ultrapassagem.",
+        "null."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Os acidentes de viação são  um problema que afecta...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-21.png",
+      "options": [
+        "a toda a sociedade.",
+        "só às vitimas. ",
+        "Só  aos condutores.",
+        "apenas à Administração Nacional de Estradas."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Circular com os pneus do veiculo velhos...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-22.png",
+      "options": [
+        "nao é perioso se têm o piso com uma boa profundidade.",
+        "É perigoso, porque endurecen e agaram-se pior à  estrada.",
+        "só é  perigoso se os pneus têm cortes ou deformações.",
+        "null."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "para não causar perigo e por em causa a segurança das pessoas e das coisas, os condutores devem...",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-23.png",
+      "options": [
+        " Circular nos limites maximos de velocidade das estradas.",
+        "circular abaixo dos limites minimos de velocidade.",
+        "regular a velocidade atendendo as caracteristicas do veiculo, às condições da via e ao estado do condutor.",
+        "ficar em ponto morto nas descidas muito inclinadas."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Nesta via de duplo sentido, onde deve estacionar se não  existem locais destinados para este fim?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-24.png",
+      "options": [
+        "Paralelamente ao lado esquerdo no sentido da marcha.",
+        "O mais próximo possivel do limite direito da faixa de rodagem, paralelamente a esta e no sentido da marcha .",
+        "Nesta situação é proibido parar ou estacionar.",
+        "Nos passeios."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "o que indica o sinal?",
+      "image": "imagens/questions/REGRA_E_NORMAS/teste4-25.png",
+      "options": [
+        "Área reservada para veiculos com dimensões anormais.",
+        "Area reservada para veiculos que transportam substancias periosas.",
+        "Parque de estacionamento para veiculos que transportam substancias perigosas.",
+        "null."
+      ],
+      "correct": 1
+    }
   ]
 }
